@@ -7,6 +7,6 @@ function Redirect($url, $permanent = false)
 }
 ?>
 <?php
-Redirect('/index.php', false);
+Redirect('welcome.php', false);
 echo "hello sir1"
 ?>
