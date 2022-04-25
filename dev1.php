@@ -1,3 +1,3 @@
 <?php
-exec("/home/aa/scripts/test.sh");
+exec("sudo mkdir /1");
 ?>
