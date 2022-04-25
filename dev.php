@@ -8,6 +8,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
+<?php
+  if (isset($_GET['reboot'])) {
+    exec('python3 command.py "sudo reboot"')
+  }
+?>
 
 <!DOCTYPE html>
 <?php if($_SESSION["username"] == "admin"){ ?>
@@ -23,7 +28,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <h1 class="my-5">Hi, <b>Admin</b>. What do you want to do</h1>
     <p>
-        <a href='?exec("python3 command.py \n"sudo reboot\n" ");' class="btn btn-danger ml-3">Reboot server</a>
+        <a href='?reboot=true' class="btn btn-danger ml-3">Reboot server</a>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
 
     </p>
