@@ -6,8 +6,8 @@ session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
-} elseif (isset($_GET['reboot'])) {
-    exec("restart");
+} elseif (isset($_GET['pdate''])) {
+    exec("updateserver");
   }
 ?>
 
@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <h1 class="my-5">Hi, <b>Admin</b>. What do you want to do</h1>
     <p>
-        <a href='?reboot=true' class="btn btn-danger ml-3">Reboot server</a>
+        <a href='?update=true' class="btn btn-danger ml-3">update server</a>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
 
     </p>
