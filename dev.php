@@ -16,7 +16,7 @@
         </head>
         <body>
             <h1>user</h1>
-            <p><?php echo htmlspecialchars($_SESSION["username"]); ?></p>
+            <p><b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></p>
         </body>
     </html>
 <?php } ?>
