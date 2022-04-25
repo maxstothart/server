@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <h1 class="my-5">Hi, <b>Admin</b>. What do you want to do</h1>
     <p>
-        <a href="#" class="btn btn-danger ml-3">Reboot server</a>
+        <a href="?exec('sudo reboot');" class="btn btn-danger ml-3">Reboot server</a>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
 
     </p>
