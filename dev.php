@@ -7,7 +7,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
-
+elseif (isset($_GET['reboot'])) {
+    exec('python3 command.py "sudo reboot"')
+  }
 ?>
 
 <!DOCTYPE html>
