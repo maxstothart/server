@@ -11,10 +11,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: index.php")
 } elseif (isset($_GET['restart'])) {
     exec("sudo systemctl restart apache2.service");
-    header("location: index.php"
+    header("location: index.php")
 } elseif (isset($_GET['update'])) {
     exec("updateserver");
-    header("location: index.php"
+    <script type="text/javascript"> window.location.rel="noopener" target="_blank" href = 'http://www.example.com/';</script>
 }
 ?>
 
