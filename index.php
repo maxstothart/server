@@ -39,7 +39,7 @@ if (isset($_GET['reboot'])) {
     </p>
     <p>
         <a href='?update=true' class="btn btn-warning">update server</a>
-        <a href="" class="btn btn-warning"></a>
+        <a href="phpmyadmin/" class="btn btn-warning">phpmyadmin</a>
 
     </p>
     <p>
