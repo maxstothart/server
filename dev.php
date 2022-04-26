@@ -9,6 +9,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 } elseif (isset($_GET['reboot'])) {
     exec("sudo reboot");
     header('Location: index.php');
+} elseif (isset($_GET['restart'])) {
+    exec("sudo systemctl restart apache2.service");
+    header('Location: index.php');
+} elseif (isset($_GET['update'])) {
+    exec("updateserver");
+    header('Location: index.php');
 }
 ?>
 
