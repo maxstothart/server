@@ -6,7 +6,12 @@ session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
-} elseif (isset($_GET['reboot'])) {
+}
+?>
+
+<!DOCTYPE html>
+<?php if($_SESSION["username"] == "admin"){ 
+if (isset($_GET['reboot'])) {
     exec("sudo reboot");
     header('Location: index.php');
 } elseif (isset($_GET['restart'])) {
@@ -15,11 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 } elseif (isset($_GET['update'])) {
     exec("updateserver");
     header('Location: index.php');
-}
-?>
-
-<!DOCTYPE html>
-<?php if($_SESSION["username"] == "admin"){ ?>
+}?>
     <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,13 +38,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     </p>
     <p>
-        <a href='' class="btn btn-warning"></a>
+        <a href='?update=true' class="btn btn-warning">update server</a>
         <a href="" class="btn btn-warning"></a>
 
     </p>
     <p>
-        <a href='?update=true' class="btn btn-success">update server</a>
-        <a href="logout.php" class="btn btn-success">Sign Out</a>
+        <a href='logout.php' class="btn btn-success">Sign Out</a>
+        <a href="reset-password.php" class="btn btn-success">Reset Password</a>
 
     </p>
 </body>
