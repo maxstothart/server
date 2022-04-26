@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 } elseif (isset($_GET['reboot'])) {
     exec("sudo reboot");
-    <script type="text/javascript"> window.location.rel="noopener" target="_blank" href = 'http://www.example.com/';</script>
+    header('Location: index.php');
 }
 ?>
 
