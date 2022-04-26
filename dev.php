@@ -6,8 +6,8 @@ session_start();
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
-} elseif (isset($_GET['pdate''])) {
-    exec("updateserver");
+} elseif (isset($_GET['reboot'])) {
+    exec("sudo reboot");
   }
 ?>
 
