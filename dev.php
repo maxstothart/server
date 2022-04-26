@@ -8,10 +8,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 } elseif (isset($_GET['reboot'])) {
     exec("sudo reboot");
-    header("location: index.php")
+    <script type="text/javascript"> window.location.rel="noopener" target="_blank" href = 'http://www.example.com/';</script>
 } elseif (isset($_GET['restart'])) {
     exec("sudo systemctl restart apache2.service");
-    header("location: index.php")
+    <script type="text/javascript"> window.location.rel="noopener" target="_blank" href = 'http://www.example.com/';</script>
 } elseif (isset($_GET['update'])) {
     exec("updateserver");
     <script type="text/javascript"> window.location.rel="noopener" target="_blank" href = 'http://www.example.com/';</script>
