@@ -37,8 +37,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     </p>
     <p>
-        <a href='?update=true' class="btn btn-warning">update server</a>
-        <a href="logout.php" class="btn btn-warning">Sign Out</a>
+        <a href='?update=true' class="btn btn-success">update server</a>
+        <a href="logout.php" class="btn btn-success">Sign Out</a>
 
     </p>
 </body>
