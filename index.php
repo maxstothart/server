@@ -13,13 +13,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <?php if($_SESSION["username"] == "admin"){ 
 if (isset($_GET['reboot'])) {
     exec("sudo reboot");
-    header('Location: index.php');
+    header('Location: /');
 } elseif (isset($_GET['restart'])) {
     exec("sudo systemctl restart apache2.service");
-    header('Location: index.php');
+    header('Location: /');
 } elseif (isset($_GET['update'])) {
     exec("updateserver");
-    header('Location: index.php');
+    header('Location: /');
 }?>
     <html lang="en">
 <head>
