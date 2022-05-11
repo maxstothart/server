@@ -1,5 +1,5 @@
 <?php
-//{"lang":"en","fm_root":"\/mnt\/server\/webserver","timezone":"Pacific\/Auckland","date_format":"d\/m\/Y H:i","auth_pass":"d3f51a199269d2b6340991ed83c09ea1","error_reporting":1}
+//{"lang":"en","fm_root":"\/mnt\/webserver","timezone":"Pacific\/Auckland","date_format":"d\/m\/Y H:i","auth_pass":"d3f51a199269d2b6340991ed83c09ea1","error_reporting":1}
 /*-------------------------------------------------
 | PHP FILE MANAGER
 +--------------------------------------------------
