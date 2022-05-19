@@ -874,6 +874,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <!-- Login forms --> 
                   <div id="loginFormsContainer" class="row login-forms box box-primary s123-box-top-primary-border" style="display: none;">
                      <!-- Send password to email --> 
+                     <?php 
+                      if(!empty($login_err)){
+                      echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                     }        
+                     ?>
                      <form id="clientEmailForm" class="text-center" action="actionpage.php" method="post">
                         <p>Please enter your email and password:</p>
                         <div class="form-group"> <input type="email" id="clientEmail" name="clientEmail" value="" class="form-control" placeholder="example@example.com" style="max-width:280px;margin: 0 auto;" required data-msg-required="Please enter your email"/> </div>
