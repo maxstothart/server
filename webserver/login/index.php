@@ -785,7 +785,7 @@
                   <div id="loginFormsContainer" class="row login-forms box box-primary s123-box-top-primary-border" style="display: none;">
                      <!-- Send password to email --> 
                      <form id="clientEmailForm" class="text-center">
-                        <p>Please enter your email1:</p>
+                        <p>Please enter your email and password:</p>
                         <div class="form-group"> <input type="email" id="clientEmail" name="clientEmail" value="" class="form-control" placeholder="example@example.com" style="max-width:280px;margin: 0 auto;" required data-msg-required="Please enter your email"/> </div>
                         <div class="form-group request-login-code-btn"> <button type="submit" class="btn btn-primary">Request login code</button> </div>
                         <!-- Hidden Inputs --> <input type="hidden" name="w" value=""> <input type="hidden" name="websiteID" value="5985208"> <input type="hidden" id="mailServer" name="mailServer" value="1"> 
