@@ -13,7 +13,7 @@
       <link rel="dns-prefetch preconnect" href="https://static.s123-cdn-static-d.com" crossorigin="anonymous"/>
       <!-- Favicon --> 
       <link rel="shortcut icon" href="https://cdn-cms-s.f-static.net/manager/websites/site123_website/files/logos/brand_files_2020/Icons/Png/Icon_blue.png?v=r81887" type="image/x-icon">
-      <link rel="icon" href="https://cdn-cms-s.f-static.net/manager/websites/site123_website/files/logos/brand_files_2020/Icons/Png/Icon_blue.png?v=r81887" type="image/x-icon">
+      <link rel="icon" href="/logo.png" type="image/x-icon">
       <link rel="manifest" href="https://cdn-cms-s.f-static.net/versions/2/css/manifest.json?w=&orderScreen=&websiteID=5985208&onlyContent=&tranW=&v=css_n152_31566608&wd=620c814d418f3.site123.me&moduleID=">
       <!-- Status Bar -->
       <meta name="apple-mobile-web-app-status-bar-style" content="default">
