@@ -489,7 +489,7 @@
                                     <li>Intel Celeron N4500 processor</li>
                                     <li>14&quot; HD 1366x768 Display</li>
                                     <li>64GB ssd</li>
-                                    <li>Runs Chromium OS</li>
+                                    <li>Runs Windows 10</li>
                                  </ul>
                               </div>
                               <div class="pricing-m-action"><button name="Product" type="submit" value="Windbook-V2" class="btn btn-primary btn-block btn-xl" data-module="620c9fcdd6c05" data-unique-page="620c9fce8c657" data-tranw="">Order Now</button></div>
