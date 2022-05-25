@@ -45,7 +45,7 @@
                                     echo "<tr>";
                                         echo "<th>#</th>";
                                         echo "<th>whofor</th>";
-                                        echo "<th>message/th>";
+                                        echo "<th>message</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
