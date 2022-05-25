@@ -508,7 +508,7 @@
                                     <li>AMD Radeon 3020e processor</li>
                                     <li>14&quot; 1366 x 768 Display</li>
                                     <li>128GB ssd</li>
-                                    <li>Runs Chromium OS</li>
+                                    <li>Runs Windows 10 and ubuntu</li>
                                  </ul>
                               </div>
                               <div class="pricing-m-action"><button name="Product" type="submit" value="Windbook-V3" class="btn btn-primary btn-block btn-xl" data-module="620c9fcdd6c05" data-unique-page="620c9fce86ece" data-tranw="">Order Now</button></div>
