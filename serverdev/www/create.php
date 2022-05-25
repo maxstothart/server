@@ -9,7 +9,7 @@ $name_err = $address_err = $salary_err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate name
-    $input_name = trim($_POST["name"]);
+    $input_name = trim($_POST["whofor"]);
     if(empty($input_name)){
         $name_err = "Please enter a name.";
     } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
@@ -19,36 +19,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Validate address
-    $input_address = trim($_POST["address"]);
+    $input_address = trim($_POST["message"]);
     if(empty($input_address)){
-        $address_err = "Please enter an address.";     
+        $address_err = "Please enter a message!";     
     } else{
         $address = $input_address;
     }
     
-    // Validate salary
-    $input_salary = trim($_POST["salary"]);
-    if(empty($input_salary)){
-        $salary_err = "Please enter the salary amount.";     
-    } elseif(!ctype_digit($input_salary)){
-        $salary_err = "Please enter a positive integer value.";
-    } else{
-        $salary = $input_salary;
-    }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($salary_err)){
+    if(empty($name_err) && empty($address_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO employees (name, address, salary) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO messenger (whofor, message) VALUES (?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_address, $param_salary);
+            mysqli_stmt_bind_param($stmt, "sss", $param_whofor, $param_message);
             
             // Set parameters
-            $param_name = $name;
-            $param_address = $address;
-            $param_salary = $salary;
+            $param_whofor = $whofor;
+            $param_message = $message;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){

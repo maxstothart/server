@@ -52,7 +52,7 @@
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['ID'] . "</td>";
                                         echo "<td>" . $row['whofor'] . "</td>";
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
