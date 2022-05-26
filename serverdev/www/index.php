@@ -1,3 +1,15 @@
+<?php
+// Include config file
+require_once "config.php";
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +45,6 @@
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Employee</a>
                     </div>
                     <?php
-                    // Include config file
-                    require_once "config.php";
-                    
-                    // Attempt select query execution
-                    session_start();
                     $_SESSION["username"] = $username; 
                     $sql = "SELECT * FROM messages WHERE nto=$username";
                     if($result = mysqli_query($link, $sql)){
