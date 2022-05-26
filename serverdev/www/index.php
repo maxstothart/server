@@ -37,14 +37,16 @@
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM messages";
+                    session_start();
+                    $_SESSION["username"] = $username; 
+                    $sql = "SELECT * FROM messages WHERE nto=$username";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
-                                        echo "<th>whofor</th>";
+                                        echo "<th>from</th>";
                                         echo "<th>message</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
@@ -53,7 +55,7 @@
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['ID'] . "</td>";
-                                        echo "<td>" . $row['whofor'] . "</td>";
+                                        echo "<td>" . $row['nfrom'] . "</td>";
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
                                             echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
