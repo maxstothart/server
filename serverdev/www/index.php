@@ -54,6 +54,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     
                     // Attempt select query execution
                     $sql = "SELECT * FROM messages";
+<<<<<<< HEAD
+>>>>>>> parent of 502ba59... update
+=======
 >>>>>>> parent of 502ba59... update
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
