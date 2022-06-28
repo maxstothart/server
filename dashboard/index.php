@@ -25,7 +25,7 @@ if (isset($_GET['reboot'])) {
 <head>
     <meta charset="UTF-8">
     <title>Admin Console</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dashboard/style.css">
     <style>
         body{ font: 14px sans-serif; text-align: center; }
     </style>
@@ -54,7 +54,7 @@ if (isset($_GET['reboot'])) {
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dashboard/style.css">
     <style>
         body{ font: 14px sans-serif; text-align: center; }
     </style>
