@@ -405,7 +405,7 @@
                         <!-- Only icon --> 
                         <li class="header-phone-wrapper" data-style="1"> <a data-close-location="right" class="actionButton" role="button" data-container="body" data-toggle="phone_menuCallActionIcons"> <i class="svg-m s123-icon-converter fa fa-phone" data-icon-name="phone" style=" mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/phone.svg?v=2'); -webkit-mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/phone.svg?v=2');" data-ie11-classes="fa fa-phone">&nbsp;</i> </a> </li>
                         <!-- Only Phone --> <!-- Client Zone --> 
-                        <li class="header-client-zone-wrapper"><a class="client-zone-link" data-close-location="right" href="dash.windmillinc.tk" ><i class="svg-m s123-icon-converter " data-icon-name="user" style=" mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/user.svg?v=2'); -webkit-mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/user.svg?v=2');" data-ie11-classes="">&nbsp;</i></a></li>
+                        <li class="header-client-zone-wrapper"><a class="client-zone-link" data-close-location="right" href="https://dash.windmillinc.tk" ><i class="svg-m s123-icon-converter " data-icon-name="user" style=" mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/user.svg?v=2'); -webkit-mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/user.svg?v=2');" data-ie11-classes="">&nbsp;</i></a></li>
                         <!-- Menu Action Buttons --> 
                      </ul>
                   </div>
