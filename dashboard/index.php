@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 ?>
 
 <!DOCTYPE html>
-<?php if($_SESSION["username"] == "admin"){ 
+<?php if($_SESSION["at"] == "admin"){ 
 if (isset($_GET['reboot'])) {
     exec("sudo reboot");
     header('Location: /');
@@ -47,6 +47,8 @@ if (isset($_GET['reboot'])) {
         <a href="reset-password.php" class="btn btn-success">Reset Password</a>
 
     </p>
+    <p>
+        <a href="https://windmillinc.tk" class="btn btn-success">Back To WindmillINC Website
 </body>
 </html>
 <?php }else{ ?>
