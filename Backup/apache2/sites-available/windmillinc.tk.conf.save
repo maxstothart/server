@@ -1,0 +1,12 @@
+<VirtualHost *:443>
+        ServerAdmin webmaster@localhost
+        ServerAlias www.wiin
+	DocumentRoot /mnt/webserver
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        SSLEngine on
+        SSLProtocol all -SSLv2
+        SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+        SSLCertificateFile "/etc/apache2/ssl/apache.crt"
+        SSLCertificateKeyFile "/etc/apache2/ssl/apache.key"
+</VirtualHost>
