@@ -508,6 +508,7 @@
                                     <li>AMD Radeon 3020e processor</li>
                                     <li>14&quot; 1366 x 768 Display</li>
                                     <li>128GB ssd</li>
+                                    <li>512GB hdd</li>
                                     <li>Runs Windows 10 and Ubuntu</li>
                                  </ul>
                               </div>
