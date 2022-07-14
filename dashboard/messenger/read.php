@@ -1,11 +1,10 @@
+<?php require_once "config.php"; ?>
 <?php
 // Check existence of id parameter before processing further
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
-    // Include config file
-    require_once "config.php";
     
     // Prepare a select statement
-    $sql = "SELECT * FROM messenger WHERE id = ?";
+    $sql = "SELECT * FROM messenger WHERE uto = '$username' OR ufrom = '$username'";
     
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
