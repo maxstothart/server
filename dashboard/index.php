@@ -48,7 +48,7 @@ if (isset($_GET['reboot'])) {
 
     </p>
     <p>
-        <a href="https://windmillinc.tk" class="btn btn-success">Windmillinc</a>
+        <a href="https://windmillinc.tk" class="btn btn-success">Main Website</a>
         <a href="/messenger/" class="btn btn-success">messenger</a>
     </p>
 </body>
@@ -70,7 +70,8 @@ if (isset($_GET['reboot'])) {
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
     <p>
-        <a href="/messenger/" class="btn btn-success">Open the messaging server</a>
+        <a href="https://windmillinc.tk" class="btn btn-success">Main Website</a>
+        <a href="/messenger/" class="btn btn-success">Messaging Server</a>
     </p>
 </body>
 </html>
@@ -89,6 +90,9 @@ if (isset($_GET['reboot'])) {
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+    </p>
+    <p>
+        <a href="https://windmillinc.tk" class="btn btn-success">Go Back To Main Website</a>
     </p>
 </body>
 </html>
