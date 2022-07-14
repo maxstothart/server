@@ -30,6 +30,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                     $ufrom = $row["ufrom"];
                 } else{
                     header("location: forbidden.html");
+                    exit();
                 
             }} else{
                 // URL doesn't contain valid id parameter. Redirect to error page
