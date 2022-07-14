@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate address
     $input_message = trim($_POST["message"]);
     if(empty($input_message)){
-        $address_err = "Please enter an message.";     
+        $message_err = "Please enter an message.";     
     } else{
         $message = $input_message;
     }
