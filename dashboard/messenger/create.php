@@ -83,12 +83,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" name="username" class="form-control <?php echo (!empty($uto_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $uto; ?>">
+                            <input type="text" name="uto" class="form-control <?php echo (!empty($uto_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $uto; ?>">
                             <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea name="Message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
+                            <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
                             <span class="invalid-feedback"><?php echo $message_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Send">
