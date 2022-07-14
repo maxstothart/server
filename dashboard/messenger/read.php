@@ -24,9 +24,9 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 
                 // Retrieve individual field value
-                $name = $row["uto"];
-                $address = $row["message"];
-                $salary = $row["ufrom"];
+                $uto = $row["uto"];
+                $message = $row["message"];
+                $ufrom = $row["ufrom"];
             } else{
                 // URL doesn't contain valid id parameter. Redirect to error page
                 header("location: error.php");
@@ -54,7 +54,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View Record</title>
+    <title>View Message</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .wrapper{
@@ -68,18 +68,18 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="mt-5 mb-3">View Record</h1>
+                    <h1 class="mt-5 mb-3">View Message</h1>
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>To</label>
                         <p><b><?php echo $row["uto"]; ?></b></p>
                     </div>
                     <div class="form-group">
-                        <label>Address</label>
-                        <p><b><?php echo $row["message"]; ?></b></p>
+                        <label>From</label>
+                        <p><b><?php echo $row["ufrom"]; ?></b></p>
                     </div>
                     <div class="form-group">
-                        <label>Salary</label>
-                        <p><b><?php echo $row["ufrom"]; ?></b></p>
+                        <label>Message</label>
+                        <p><b><?php echo $row["message"]; ?></b></p>
                     </div>
                     <p><a href="index.php" class="btn btn-primary">Back</a></p>
                 </div>
