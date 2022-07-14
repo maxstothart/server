@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     $input_ufrom = trim($_POST["ufrom"]);
     if(empty($input_ufrom)){
-        $uto_err = "Please enter a name.";
+        $ufrom = $username;
     #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
     #    $uto_err = "Please enter a valid name.";
     } else{
@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group">
                             <label>From</label>
-                            <textarea name="ufrom" class="form-control <?php echo (!empty($ufrom_err)) ? 'is-invalid' : ''; ?>"><?php echo $ufrom; ?></textarea>
+                            <input type="text" name="ufrom" class="form-control <?php echo (!empty($ufrom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ufrom; ?>">
                             <span class="invalid-feedback"><?php echo $ufrom_err;?></span>
                         </div>
                         <div class="form-group">
