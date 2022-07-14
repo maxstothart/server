@@ -24,6 +24,6 @@ SOFTWARE.
 
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-DOCUMENTATION
+MORE
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-Please visit https://code-boxx.com/ for more.
+Please visit https://code-boxx.com/ for more!
