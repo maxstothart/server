@@ -1,5 +1,5 @@
-<?php if($_SESSION["at"] == "admin"){ ?>
-normal
+<?php require_once "config.php";
+if($acctype == "admin"){ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +35,6 @@ normal
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                     </div>
                     <?php
-                    // Include config file
-                    require_once "config.php";
-                    
                     // Attempt select query execution
                     $sql = "SELECT * FROM messenger";
                     if($result = mysqli_query($link, $sql)){
@@ -87,7 +84,6 @@ normal
 </html>
 <?php }else{ ?>
 <!DOCTYPE html>
-admin
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -122,8 +118,6 @@ admin
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                     </div>
                     <?php
-                    // Include config file
-                    require_once "config.php";
                     
                     // Attempt select query execution
                     $sql = "SELECT * FROM messenger WHERE uto='$username' OR uto='everyone' OR ufrom='$username'";
