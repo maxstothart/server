@@ -1,5 +1,6 @@
 <?php require_once "config.php";
-if($acctype == "admin"){ ?>
+if($acctype == "admin"){ 
+echo "admin"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
