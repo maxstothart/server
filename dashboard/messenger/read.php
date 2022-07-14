@@ -27,10 +27,6 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 $uto = $row["uto"];
                 $message = $row["message"];
                 $ufrom = $row["ufrom"];
-                echo $uto;
-                echo $message;
-                echo $ufrom;
-            } else{
                 // URL doesn't contain valid id parameter. Redirect to error page
                 header("location: error.php");
                 exit();
@@ -82,7 +78,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                     </div>
                     <div class="form-group">
                         <label>Message</label>
-                        <p><b><?php echo $row["Message"]; ?></b></p>
+                        <p><b><?php echo $row["message"]; ?></b></p>
                     </div>
                     <p><a href="index.php" class="btn btn-primary">Back</a></p>
                 </div>
