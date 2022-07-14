@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $address = $input_address;
     }
     
-    $salary = $username
+    $salary = $username;
     
     // Check input errors before inserting in database
     if(empty($name_err) && empty($address_err) && empty($salary_err)){
