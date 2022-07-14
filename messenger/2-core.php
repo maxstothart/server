@@ -7,7 +7,7 @@ ini_set("display_errors", 1);
 define("DB_HOST", "localhost");
 define("DB_NAME", "txt");
 define("DB_CHARSET", "utf8");
-define("DB_USER", "admin");
+define("DB_USER", "root");
 define("DB_PASSWORD", "4138015462");
 
 // (C) START SESSION - ACT AS USER
