@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 ?>
 
 <!DOCTYPE html>
-<?php if($_SESSION["username"] == "admin"){ 
+<?php if($_SESSION["at"] == "admin"){ 
 if (isset($_GET['reboot'])) {
     exec("sudo reboot");
     header('Location: /');
