@@ -1,4 +1,5 @@
 <?php if($_SESSION["at"] == "admin"){ ?>
+normal
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +86,8 @@
 </body>
 </html>
 <?php }else{ ?>
-    <!DOCTYPE html>
+<!DOCTYPE html>
+admin
 <html lang="en">
 <head>
     <meta charset="UTF-8">
