@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $ufrom = $username;
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($salary_err)){
+    if(empty($uto_err) && empty($message_err)){
         // Prepare an insert statement
         $sql = "INSERT INTO messenger (uto, message, ufrom) VALUES (?, ?, ?)";
          
