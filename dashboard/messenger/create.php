@@ -10,7 +10,7 @@ $uto_err = $message_err = $ufrom_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate name
     $input_uto = trim($_POST["uto"]);
-    if(empty($input_name)){
+    if(empty($input_uto)){
         $uto_err = "Please enter a name.";
     #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
     #    $uto_err = "Please enter a valid name.";
