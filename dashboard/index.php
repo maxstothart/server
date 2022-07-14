@@ -51,8 +51,29 @@ if (isset($_GET['reboot'])) {
         <a href="https://windmillinc.tk" class="btn btn-success">Back To WindmillINC Website
 </body>
 </html>
-<?php }else{ ?>
+<?php }elseif($_SESSION["at"] == "message"){ ?>
     <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{ font: 14px sans-serif; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Windmill INC</h1>
+    <p>
+        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+        <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+    </p>
+    <p>
+        <a href="reset-password.php" class="btn btn-success">Open the messaging server</a>
+    </p>
+</body>
+</html>
+<?php }else{ ?>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
