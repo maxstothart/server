@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
- $db = new mysqli("localhost","root","");
+ $db = new mysqli("localhost,"admin","4138015462");
    if($db->connect_errno > 0){
          die('Unable to connect to database [' . $db->connect_error . ']');  } 
      
