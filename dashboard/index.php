@@ -70,8 +70,8 @@ if (isset($_GET['reboot'])) {
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
     <p>
-        <a href="https://windmillinc.tk" class="btn btn-success">Main Website</a>
-        <a href="/messenger/" class="btn btn-success">Messaging Server</a>
+        <a href="https://windmillinc.tk" class="btn btn-success">Back To Main Website</a>
+        <a href="/messenger/" class="btn btn-success">Open Messaging Server</a>
     </p>
 </body>
 </html>
