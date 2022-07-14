@@ -1,6 +1,6 @@
 <?php require_once "config.php";
 if($acctype == "admin"){ 
-echo "admin"?>
+    echo "ELEVATED PRIVELEDGES: $username"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

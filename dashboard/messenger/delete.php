@@ -1,6 +1,7 @@
 <?php require_once "config.php";
-if($acctype == "admin"){ ?>
-<?php echo "admin";
+if($acctype == "admin"){ 
+    echo "ELEVATED PRIVELEDGES: $username"?>
+<?php
 // Process delete operation after confirmation
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     
