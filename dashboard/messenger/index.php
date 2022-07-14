@@ -41,7 +41,7 @@ echo $username
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Employees Details</h2>
+                        <h2 class="pull-left">Messages</h2>
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Employee</a>
                     </div>
                     <?php
@@ -49,13 +49,14 @@ echo $username
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM messenger WHERE uto='$username'";
+                    $sql = "SELECT * FROM messenger WHERE uto='$username' OR ufrom='$username'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
+                                        echo "<th>To</th>";
                                         echo "<th>From</th>";
                                         echo "<th>Message</th>";
                                         echo "<th>Action</th>";
@@ -65,6 +66,7 @@ echo $username
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['uto'] . "</td>";
                                         echo "<td>" . $row['ufrom'] . "</td>";
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
