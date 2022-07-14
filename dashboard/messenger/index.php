@@ -73,7 +73,7 @@
                             // Free result set
                             mysqli_free_result($result);
                         } else{
-                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+                            echo '<div class="alert alert-danger"><em>No Messages were found.</em></div>';
                         }
                     } else{
                         echo "Oops! Something went wrong. Please try again later.";
