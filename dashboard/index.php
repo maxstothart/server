@@ -48,7 +48,9 @@ if (isset($_GET['reboot'])) {
 
     </p>
     <p>
-        <a href="https://windmillinc.tk" class="btn btn-success">Back To WindmillINC Website
+        <a href="https://windmillinc.tk" class="btn btn-success">Windmillinc</a>
+        <a href="/messenger/" class="btn btn-success">messenger</a>
+    </p>
 </body>
 </html>
 <?php }elseif($_SESSION["at"] == "message"){ ?>
