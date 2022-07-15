@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username = trim($_POST["username"]);
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.1";
+                echo "Oops! Something went wrong. Please try again later.";
             }
 
             // Close statement
@@ -81,9 +81,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
                 header("location: login.php");
-                echo "test"
             } else{
-                echo "Oops! Something went wrong. Please try again later.2";
+                echo "Oops! Something went wrong. Please try again later.";
             }
 
             // Close statement
