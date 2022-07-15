@@ -31,7 +31,7 @@ if (isset($_GET['reboot'])) {
     </style>
 </head>
 <body>
-    <h1 class="my-5">Hi, <b>Admin</b>. What do you want to do</h1>
+    <h1 class="my-5">Hi, <b>Admin 1</b>. What do you want to do</h1>
     <p>
         <a href='?reboot=true' class="btn btn-danger ml-3">restart pi</a>
         <a href="?restart=true" class="btn btn-danger ml-3">restart server</a>
