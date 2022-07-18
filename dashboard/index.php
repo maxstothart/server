@@ -36,17 +36,18 @@ if (isset($_GET['reboot'])) {
     <p>
         <a href='?reboot=true' class="btn btn-danger ml-3">restart pi</a>
         <a href="?restart=true" class="btn btn-danger ml-3">restart server</a>
-
     </p>
     <p>
         <a href='?update=true' class="btn btn-warning">update server</a>
         <a href="phpmyadmin/" class="btn btn-warning">phpmyadmin</a>
-
+    </p>
+    <p>
+        <a href='https://ssh.windmillinc.tk' class="btn btn-warning">Terminal</a>
+        <a href="https://vnc.windmillinc.tk" class="btn btn-warning">Remote Desktop</a>
     </p>
     <p>
         <a href='logout.php' class="btn btn-success">Sign Out</a>
         <a href="reset-password.php" class="btn btn-success">Reset Password</a>
-
     </p>
     <p>
         <a href="https://windmillinc.tk" class="btn btn-success">Main Website</a>
