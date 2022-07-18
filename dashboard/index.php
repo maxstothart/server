@@ -58,6 +58,7 @@ if (isset($_GET['reboot'])) {
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+    <link rel="icon" type="image/x-icon" href="http://windmillinc.tk/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; text-align: center; }
@@ -79,7 +80,8 @@ if (isset($_GET['reboot'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="http://windmillinc.tk/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; text-align: center; }
