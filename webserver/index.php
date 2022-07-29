@@ -27,8 +27,8 @@
       <!-- Mobile Browser Address Bar Color --> 
       <meta name="theme-color" content="#0b2c4f">
       <!-- Regular Meta Info --> 
-      <title class="s123-js-pjax">Windmill Inc - Windmill INC</title>
-      <meta name="description" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
+      <title class="s123-js-pjax">Windmill INC</title>
+      <meta name="description" content="Home - Windmill INC" class="s123-js-pjax">
       <meta name="keywords" content="" class="s123-js-pjax">
       <link rel="canonical" href="https://620c814d418f3.site123.me/" class="s123-js-pjax"/>
       <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171296505-1"></script> <script>      window.dataLayer = window.dataLayer || [];
@@ -361,19 +361,19 @@
       <!-- Facebook Meta Info --> 
       <meta property="og:url" content="https://620c814d418f3.site123.me/" class="s123-js-pjax">
       <meta property="og:image" content="https://static1.s123-cdn-static-a.com/ready_uploads/media/34155/800_5cde6e763c693.jpg" class="s123-js-pjax">
-      <meta property="og:description" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
-      <meta property="og:title" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
+      <meta property="og:description" content="Home - Windmill INC" class="s123-js-pjax">
+      <meta property="og:title" content="Windmill INC" class="s123-js-pjax">
       <meta property="og:site_name" content="Windmill Inc" class="s123-js-pjax">
       <meta property="og:see_also" content="https://620c814d418f3.site123.me" class="s123-js-pjax">
       <!-- Google+ Meta Info --> 
-      <meta itemprop="name" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
-      <meta itemprop="description" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
+      <meta itemprop="name" content="Windmill INC" class="s123-js-pjax">
+      <meta itemprop="description" content="Home - Windmill INC" class="s123-js-pjax">
       <meta itemprop="image" content="https://static1.s123-cdn-static-a.com/ready_uploads/media/34155/800_5cde6e763c693.jpg" class="s123-js-pjax">
       <!-- Twitter Meta Info --> 
       <meta name="twitter:card" content="summary" class="s123-js-pjax">
       <meta name="twitter:url" content="https://620c814d418f3.site123.me/" class="s123-js-pjax">
-      <meta name="twitter:title" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
-      <meta name="twitter:description" content="Windmill Inc - Windmill INC" class="s123-js-pjax">
+      <meta name="twitter:title" content="Windmill INC" class="s123-js-pjax">
+      <meta name="twitter:description" content="Home - Windmill INC" class="s123-js-pjax">
       <meta name="twitter:image" content="https://static1.s123-cdn-static-a.com/ready_uploads/media/34155/800_5cde6e763c693.jpg" class="s123-js-pjax">
       <meta name="robots" content="all" class="s123-js-pjax">
       <!-- Website CSS variables --> 
