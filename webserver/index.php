@@ -449,7 +449,7 @@
                   <div class="home_main_wrapper main_ele_place_top simple_object_position_center_center" data-main-goal="no" data-second-goal="no">
                      <div class="box_container boxStyle_">
                         <div class="hm-t-c boxBorder  ele_align_center">
-                           <h1 id="home_siteSlogan" class=" weight700   background10 hm-txt" >Hello Brydon</h1>
+                           <h1 id="home_siteSlogan" class=" weight700   background10 hm-txt" >Windmill INC</h1>
                            <h2 id="home_siteSlogan_2" class=" weight400  shadow1  hm-txt" style="display:none"></h2>
                            <p id="home_SecondSiteSlogan" class=" weight400  shadow1 background9 hm-txt" >Combining good software and good computers</p>
                         </div>
