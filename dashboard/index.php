@@ -55,7 +55,7 @@ if (isset($_GET['reboot'])) {
     </p>
 </body>
 </html>
-<?php }elseif($_SESSION["at"] == "message"){ ?>
+<?php }elseif($_SESSION["at"] == "messenger"){ ?>
     <html lang="en">
 <head>
     <meta charset="UTF-8">
