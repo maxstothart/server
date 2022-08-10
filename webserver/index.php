@@ -397,7 +397,7 @@
                         <!-- <li class="moduleMenu" data-menu-module-id="620c9fcdd6c05"><a class="page-unique s123-fast-page-load" href="/pricing"><span class="txt-container">Pricing</span></a></li> -->
                         <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique s123-fast-page-load" href="/about"><span class="txt-container">About</span></a></li>
                         <!-- <li class="moduleMenu" data-menu-module-id="620c9f05d6bca"><a class="page-unique s123-fast-page-load" href="/donate"><span class="txt-container"></span></a>Donate</li> -->
-                        <li class="moduleMenu" data-menu-module-id="620ca974d6c68"><a class="page-unique s123-fast-page-load" href="/pricing"><span class="txt-container">Jobs</span></a></li>
+                        <li class="moduleMenu" data-menu-module-id="620ca974d6c68"><a class="page-unique s123-fast-page-load" href="/pricing"><span class="txt-container">Shop</span></a></li>
                      </ul>
                      <ul class="navActions nav navbar-nav">
                         <!-- Multi Currency --> <!-- Cart --> 
