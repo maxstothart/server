@@ -591,7 +591,6 @@
                         <div> <span class="footer_name website-name-preview-helper">Windmill Inc</span> </div>
                         <div>                                Copyright © 2022 All rights reserved
                         </div>
-                        <div class="clearfix upgrade-website-preview-helper">Powered By <a target="_blank" href="https://www.site123.com">SITE123</a> - <a target="_blank" href="https://www.site123.com">Create your own website</a></div>
                      </div>
                      <div class="side2 col-xs-12 col-sm-6 col-md-6">
                         <ul class="navPages nav navbar-nav hidden-xs">
