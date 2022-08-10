@@ -479,7 +479,6 @@
                         <div> <span class="footer_name website-name-preview-helper">Windmill Inc</span> </div>
                         <div>                                Copyright © 2022 All rights reserved
                         </div>
-                        <div class="clearfix upgrade-website-preview-helper">Powered By <a target="_blank" href="https://www.site123.com">SITE123</a> - <a target="_blank" href="https://www.site123.com">Create your own website</a></div>
                      </div>
                      <div class="side2 col-xs-12 col-sm-6 col-md-6">
                         <ul class="navPages nav navbar-nav hidden-xs">
@@ -508,7 +507,6 @@
             <input type="hidden" id="multiPhonesSettings" value="[{&quot;uniqid&quot;:&quot;mp-620c9eadd6bb5&quot;,&quot;number&quot;:&quot;0274170331&quot;,&quot;dialCode&quot;:&quot;&quot;,&quot;countryData&quot;:&quot;&quot;,&quot;note&quot;:&quot;CEO&quot;,&quot;type&quot;:&quot;1&quot;}]"> 
          </div>
       </div>
-      <div id="showSmallAdOnScroll" class="upgrade-website-preview-helper style2 static"><a rel="nofollow" target="_blank" href="https://www.site123.com/?utm_source=user-website&utm_medium=powered-by-ad-en&utm_content=all&utm_campaign=all"><span class="s123-b-b-s-1">I BUILT MY SITE FOR FREE USING</span> <img src="https://cdn-cms-s.f-static.net/manager/websites/site123_website/files/logos/brand_files_2020/Logo/Horizontal/PNG/Horizontal_Black.png?v=n82093" style="height:21px;width:auto;vertical-align:middle;">&nbsp;&nbsp;&nbsp;<span class="site123link hidden-xs">CREATE YOUR WEBSITE</span></a></div>
       <input type="hidden" id="layoutNUM" name="layoutNUM" value="1"> <input type="hidden" id="footer_layout" name="footer_layout" value="1"> <input type="hidden" id="layoutMenuPositionTXT" name="layoutMenuPositionTXT" value="top"> <input type="hidden" id="versionNUM" name="versionNUM" value="2"> <input type="hidden" id="w" name="w" value=""> <input type="hidden" id="websiteID" value="5985208"> <input type="hidden" id="enable_as_theme" value="0"> <input type="hidden" id="onepage" value="0"> <input type="hidden" id="pjaxSupported" value="0"> <input type="hidden" id="moduleTypeNUM" class="s123-js-pjax" name="moduleTypeNUM" value="113"> <input type="hidden" id="hasEcommerce" value="1"> <input type="hidden" id="pageUniqueID" class="s123-js-pjax" name="pageUniqueID" value="module-112"> <script>        var menuScrollOffset = 60;
          var packageNUM = 1;
          var domain = '620c814d418f3.site123.me';
