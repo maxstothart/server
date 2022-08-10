@@ -1,6 +1,5 @@
 <?php
 if (isset($_GET['clientZone'])) {
-   exec("sudo reboot");
    header('Location: https://dash.windmillinc.tk');
 }
 ?>
