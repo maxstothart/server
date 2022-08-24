@@ -4,6 +4,8 @@ credentials-file: /root/.cloudflared/6355638d-51ec-4ec3-bb67-ff549ff3c244.json
 ingress:
   - hostname: ssh.windmillinc.tk
     service: ssh://localhost:22
+  - hostname: vnc.windmillinc.tk
+    service: tcp://localhost:5901
   - service: http_status:404
   # Catch-all rule, which responds with 404 if traffic doesn't match any of
   # the earlier rules
