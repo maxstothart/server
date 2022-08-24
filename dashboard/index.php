@@ -42,15 +42,15 @@ if (isset($_GET['reboot'])) {
         <a href="phpmyadmin/" class="btn btn-warning">phpmyadmin</a>
     </p>
     <p>
-        <a href='https://ssh.windmillinc.tk' class="btn btn-warning">Terminal</a>
-        <a href="https://vnc.windmillinc.tk" class="btn btn-warning">Remote Desktop</a>
+        <a href='https://ssh.windmill-inc.com' class="btn btn-warning">Terminal</a>
+        <a href="https://vnc.windmill-inc.com" class="btn btn-warning">Remote Desktop</a>
     </p>
     <p>
         <a href='logout.php' class="btn btn-success">Sign Out</a>
         <a href="reset-password.php" class="btn btn-success">Reset Password</a>
     </p>
     <p>
-        <a href="https://windmillinc.tk" class="btn btn-success">Main Website</a>
+        <a href="https://windmill-inc.com" class="btn btn-success">Main Website</a>
         <a href="/messenger/" class="btn btn-success">messenger</a>
     </p>
 </body>
@@ -73,7 +73,7 @@ if (isset($_GET['reboot'])) {
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
     <p>
-        <a href="https://windmillinc.tk" class="btn btn-success">Back To Main Website</a>
+        <a href="https://windmill-inc.com" class="btn btn-success">Back To Main Website</a>
         <a href="/messenger/" class="btn btn-success">Open Messaging Server</a>
     </p>
 </body>
@@ -96,7 +96,7 @@ if (isset($_GET['reboot'])) {
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
     <p>
-        <a href="https://windmillinc.tk" class="btn btn-success">Go Back To Main Website</a>
+        <a href="https://windmill-inc.com" class="btn btn-success">Go Back To Main Website</a>
     </p>
 </body>
 </html>
