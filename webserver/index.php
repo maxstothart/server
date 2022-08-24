@@ -441,7 +441,7 @@ if (isset($_GET['clientZone'])) {
                <li class="moduleMenu" data-menu-module-id="620c9fcdd6c05"><a class="page-unique" href="/pricing"><span class="txt-container">Pricing</span></a></li> -->
                <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique" href="/about"><span class="txt-container">About</span></a></li>
               <!-- <li class="moduleMenu" data-menu-module-id="620c9f05d6bca"><a class="page-unique" href="/donate"><span class="txt-container">Donate</span></a></li> -->
-               <li class="moduleMenu" data-menu-module-id="620ca974d6c68"><a class="page-unique" href="/jobs"><span class="txt-container">Jobs</span></a></li>
+               <li class="moduleMenu" data-menu-module-id="620ca974d6c68"><a class="page-unique" href="/store"><span class="txt-container">store</span></a></li>
                <!-- Website Footer Pages --> 
             </ul>
          </div>
@@ -556,10 +556,10 @@ if (isset($_GET['clientZone'])) {
                      <div class="side2 col-xs-12 col-sm-6 col-md-6">
                         <ul class="navPages nav navbar-nav hidden-xs">
                            <li class="moduleMenu active"><a class="page-unique homepageMenu s123-fast-page-load" href="/"><span class="txt-container">Home</span></a></li>
-                           <li class="moduleMenu" data-menu-module-id="620c9fcdd6c05"><a class="page-unique s123-fast-page-load" href="/pricing"><span class="txt-container">Pricing</span></a></li>
-                           <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique s123-fast-page-load" href="/about"><span class="txt-container">About</span></a></li>
-                           <li class="moduleMenu" data-menu-module-id="620c9f05d6bca"><a class="page-unique s123-fast-page-load" href="/donate"><span class="txt-container">Donate</span></a></li>
-                           <li class="moduleMenu" data-menu-module-id="620ca974d6c68"><a class="page-unique s123-fast-page-load" href="/jobs"><span class="txt-container">Jobs</span></a></li>
+                           <li class="moduleMenu" data-menu-module-id="620c9fcdd6c05"><a class="page-unique s123-fast-page-load" href="/about"><span class="txt-container">About</span></a></li>
+                           <li class="moduleMenu" data-menu-module-id="5b0a4ba50e4e8"><a class="page-unique s123-fast-page-load" href="/store"><span class="txt-container">Store</span></a></li>
+                        <!--   <li class="moduleMenu" data-menu-module-id="620c9f05d6bca"><a class="page-unique s123-fast-page-load" href="/donate"><span class="txt-container">Donate</span></a></li> -->
+                        <!--   <li class="moduleMenu" data-menu-module-id="620ca974d6c68"><a class="page-unique s123-fast-page-load" href="/store"><span class="txt-container">Jobs</span></a></li> -->
                         </ul>
                      </div>
                   </div>
