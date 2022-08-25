@@ -1,6 +1,6 @@
 <?php
 if(empty($_GET['status'])){
-	header('Location:store/index.php.php?status=1');
+	header('Location:store/index.php?status=1');
 	exit;
 }
 ?>
