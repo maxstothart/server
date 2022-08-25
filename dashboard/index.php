@@ -11,7 +11,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <!DOCTYPE html>
 <?php if($_SESSION["at"] == "admin"){ 
-    echo "<h1>admin</h1>"
 if (isset($_GET['reboot'])) {
     exec("sudo reboot");
     header('Location: /');
