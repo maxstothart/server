@@ -422,7 +422,7 @@ if (isset($_GET['clientZone'])) {
             <div class="navPagesLeft">
                <div class="header-menu-wrapper"><a data-close-location="left" data-menu-color="" data-menu-type="0" data-menu-align="center" data-is-mobile="true" class="mobile-menu-btn actionButton" role="button" data-container="body" data-toggle="menuCallActionIcons"><i class="svg-m s123-icon-converter " data-icon-name="bars" style=" mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/bars.svg?v=2'); -webkit-mask: url('https://static1.s123-cdn-static-a.com/ready_uploads/svg/bars.svg?v=2');" data-ie11-classes="">&nbsp;</i></a></div>
             </div>
-            <div class="navbar-header"> <a href="/" class="s123-site-logo navbar-brand s123-w-l-s page-unique s123-fast-page-load"><img alt="Windmill Inc" class="img-responsive" src="https://static1.s123-cdn-static-a.com/uploads/5985208/400_filter_nobg_620c9c047a0e8.png"><span class="website-name website-name-preview-helper website-name-active  ">Windmill Inc</span></a> </div>
+            <div class="navbar-header"> <a href="/" class="s123-site-logo navbar-brand s123-w-l-s page-unique s123-fast-page-load"><img alt="Windmill Inc" class="img-responsive" sWindmill Incrc="https://static1.s123-cdn-static-a.com/uploads/5985208/400_filter_nobg_620c9c047a0e8.png"><span class="website-name website-name-preview-helper website-name-active  "></span></a> </div>
             <div class="navPagesRight">
                <ul class="navActions nav navbar-nav">
                   <!-- Show header phone --> 
@@ -454,7 +454,7 @@ if (isset($_GET['clientZone'])) {
                   <div class="home_main_wrapper main_ele_place_top simple_object_position_center_center" data-main-goal="no" data-second-goal="no">
                      <div class="box_container boxStyle_">
                         <div class="hm-t-c boxBorder  ele_align_center">
-                           <h1 id="home_siteSlogan" class=" weight700   background10 hm-txt" >Windmill INC</h1>
+                           <h1 id="home_siteSlogan" class=" weight700   background10 hm-txt" >windmillinc1</h1>
                            <h2 id="home_siteSlogan_2" class=" weight400  shadow1  hm-txt" style="display:none"></h2>
                            <p id="home_SecondSiteSlogan" class=" weight400  shadow1 background9 hm-txt" >Combining good software and good computers</p>
                         </div>
