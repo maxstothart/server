@@ -34,8 +34,8 @@ if (isset($_GET['reboot'])) {
 <body>
     <h1 class="my-5">Hi, <b>Admin</b>. What do you want to do</h1>
     <p>
-        <a href='?reboot=true' class="btn btn-danger ml-3">restart pi</a>
-        <a href="?restart=true" class="btn btn-danger ml-3">restart server</a>
+        <a href='?reboot=true' class="btn btn-danger ml-3">restart server</a>
+        <a href="?restart=true" class="btn btn-danger ml-3">restart apache2</a>
     </p>
     <p>
         <a href='?update=true' class="btn btn-warning">update server</a>
