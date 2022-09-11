@@ -18,7 +18,7 @@ if (isset($_GET['reboot'])) {
     exec("sudo systemctl restart apache2.service");
     header('Location: /');
 } elseif (isset($_GET['update'])) {
-    exec("git -C '/var/www/server' add --all && git -C '/var/www/server' git commit -m 'dash' && git -C '/var/www/server' pull origin main");
+    exec("git -C '/var/www/server' add --all && git -C '/var/www/server' git commit -m 'dash' && git -C '/var/www/server' pull origin main && sudo systemctl restart apache2");
     header('Location: /');
 }?>
     <html lang="en">
