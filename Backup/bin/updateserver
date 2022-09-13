@@ -1,0 +1,1 @@
+git -C "/var/www/server" add --all && git -C "/var/www/server" commit -m "cron" && git -C "/var/www/server" pull origin main
