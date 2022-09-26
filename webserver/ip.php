@@ -1,6 +1,3 @@
-<?php
-echo $_SERVER['REMOTE_ADDR']
-?>
 
 <!DOCTYPE html><html style="font-size: 10px;font-family: Roboto, Arial, sans-serif;" lang="en-GB" system-icons typography typography-spacing><head><meta http-equiv="origin-trial" content="AsKJ0YJfrprDHN9cO+Arkwlyt0SqGVbRekp6Ho6B0zL8/aWcEEa7mYjLrXVRY4E3+ZPTupaMmCxJOtl4ava9CgAAAABteyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2Njk3NjYzOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="/><script nonce="wUI2TAcy5wJcSuSOC-kenQ">var ytcfg={d:function(){return window.yt&&yt.config_||ytcfg.data_||(ytcfg.data_={})},get:function(k,o){return k in ytcfg.d()?ytcfg.d()[k]:o},set:function(){var a=arguments;if(a.length>1)ytcfg.d()[a[0]]=a[1];else for(var k in a[0])ytcfg.d()[k]=a[0][k]}};
 window.ytcfg.set('EMERGENCY_BASE_URL', '\/error_204?t\x3djserror\x26level\x3dERROR\x26client.name\x3d1\x26client.version\x3d2.20220921.08.00');</script><script nonce="wUI2TAcy5wJcSuSOC-kenQ">(function(){window.yterr=window.yterr||true;window.unhandledErrorMessages={};window.unhandledErrorCount=0;
