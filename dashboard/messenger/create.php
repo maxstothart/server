@@ -319,15 +319,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <option value="">To</option>
                                 <option value="US">United States of America</option>
                                 <?php
-                                    // Create connection
-                                        $conn = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
-                                    // Check connection
-                                    if (!$conn) {
-                                        die("Connection failed: " . mysqli_connect_error());
-                                    }
-
                                     $sql = "SELECT id, username, aname FROM users";
-                                    $result = mysqli_query($conn, $sql);
+                                    $result = mysqli_query($link, $sql);
 
                                     if (mysqli_num_rows($result) > 0) {
                                         // output data of each row
@@ -337,8 +330,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     } else {
                                         echo "0 results";
                                     }
-
-                                        mysqli_close($conn);
                                     ?>
                             </select>
                             <span class="invalid-feedback"><?php echo $uto_err;?></span>
