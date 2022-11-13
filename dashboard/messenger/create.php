@@ -159,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group">
                             <label>To</label>
                             <select id="dbox" name="uto">  
-                                <option value="<?php echo $username ?>"><?php echo $username ?></option>
+                                <option value="">                    </option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
                                     $result = mysqli_query($link, $sql);
