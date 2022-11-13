@@ -71,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
  
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -135,6 +135,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 .show {display: block;}
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+    $(function(){
+        $("#uto").select2();
+    }); 
+</script>
 </head>
 <body>
     <div class="wrapper">
@@ -144,14 +153,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <label>To</label>
-                            <input type="text" name="uto" class="form-control <?php echo (!empty($uto_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $uto; ?>">
+                            <select id="uto" name="uto">  
+                                <option value="">To</option>
+                                <option value="US">United States of America</option>
+                                <?php
+                                    $sql = "SELECT id, username, aname FROM users";
+                                    $result = mysqli_query($link, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                        // output data of each row
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
+                                    }
+                                    } else {
+                                        echo "0 results";
+                                    }
+                                    ?>
+                            </select>
                             <span class="invalid-feedback"><?php echo $uto_err;?></span>
-                        </div>
-                        <div class="form-group">
-                            <label>From</label>
-                            <input type="text" name="ufrom" class="form-control <?php echo (!empty($ufrom_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $ufrom; ?>">
-                            <span class="invalid-feedback"><?php echo $ufrom_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
