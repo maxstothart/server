@@ -141,7 +141,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <script>
     $(function(){
-        $("#uto").select2();
+        $("#dbox").select2();
     }); 
 </script>
 </head>
@@ -154,7 +154,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>To</label>
-                            <select id="uto" name="uto">  
+                            <select id="dbox" name="uto">  
                                 <option value="">To</option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
