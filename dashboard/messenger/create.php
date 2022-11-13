@@ -156,7 +156,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <?php
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM messenger WHERE user='$username'";
+                    $sql = "SELECT * FROM friends WHERE user='$username'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<select id="dbox" name="uto">';
