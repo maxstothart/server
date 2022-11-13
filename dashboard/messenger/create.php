@@ -58,11 +58,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
          
         // Close statement
-        mysqli_stmt_close($stmt);
     }
     
     // Close connection
-    mysqli_close($link);
 }
 ?>
  
@@ -178,22 +176,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group">
                             <label>From</label>
-                            <select id="dbox2" name="ufrom">  
-                                <option value="<?php echo $username ?>"><?php echo $username ?></option>
-                                <?php
-                                    $sql = "SELECT id, username, aname FROM users";
-                                    $result = mysqli_query($link, $sql);
-
-                                    if (mysqli_num_rows($result) > 0) {
-                                        // output data of each row
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                    }
-                                    } else {
-                                        echo "0 results";
-                                    }
-                                    ?>
-                            </select>
+                            <?php
+                    
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM users";
+                    if($result = mysqli_query($link, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<select id="dbox" name="uto">';
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
+                                }
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+ 
+                    // Close connection
+                    mysqli_close($link);
+                    ?>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
