@@ -153,8 +153,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
+                            <label>To</label>
                             <select id="uto" name="uto">  
                                 <option value="">To</option>
+                                <?php
+                                    $sql = "SELECT id, username, aname FROM users";
+                                    $result = mysqli_query($link, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                        // output data of each row
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
+                                    }
+                                    }
+                                    ?>
+                            </select>
+                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
+                        </div>
+                        <div class="form-group">
+                            <label>From</label>
+                            <select id="dbox" name="ufrom">  
+                                <option value="<?php echo $username ?>"><?php echo $username ?></option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
                                     $result = mysqli_query($link, $sql);
