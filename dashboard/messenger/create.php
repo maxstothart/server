@@ -314,7 +314,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <select id="uto">  
-                                <option value="">Select your country</option>
+                                <option value="">To</option>
                                 <option value="jadon">jadon</option>
                             </select>
                         </div>
