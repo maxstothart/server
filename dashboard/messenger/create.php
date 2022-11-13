@@ -295,6 +295,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 .show {display: block;}
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+    $(function(){
+        $("#country").select2();
+    }); 
+</script>
 </head>
 <body>
     <div class="wrapper">
@@ -304,19 +313,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                        <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn">To</button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                    <a href="#about">About</a>
-                                    <a href="#base">Base</a>
-                                    <a href="#blog">Blog</a>
-                                    <a href="#contact">Contact</a>
-                                    <a href="#custom">Custom</a>
-                                    <a href="#support">Support</a>
-                                    <a href="#tools">Tools</a>
-                                </div>
-                        </div>
+                            <select id="country">  
+                                <option value="">Select your country</option>
+                                <option value="US">United States of America</option>
+                                <option value="KE">Kenya</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="IN">India</option>
+                                <option value="CN">China</option>
+                                <option value="CA">Canada</option>
+                                <option value="ZA">South Africa</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
@@ -326,29 +332,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
-                    <script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-</script>
                 </div>
             </div>        
         </div>
