@@ -335,7 +335,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group">
                             <select id="uto" name="uto">  
                                 <option value="">To</option>
-                                <option value="US">United States of America</option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
                                     $result = mysqli_query($link, $sql);
