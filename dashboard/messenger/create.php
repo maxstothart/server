@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate name
     $input_uto = trim($_POST["uto"]);
     if(empty($input_uto)){
-        $uto_err = "Please enter a name.";
+        $uto_err = "Please enter a recipient.";
     #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
     #    $uto_err = "Please enter a valid name.";
     } else{
@@ -30,11 +30,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     $input_ufrom = trim($_POST["ufrom"]);
-    if(empty($input_ufrom)){
-        $ufrom = $username;
-    #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-    #    $uto_err = "Please enter a valid name.";
-    } else{
         $ufrom = $input_ufrom;
     }
     
@@ -174,7 +169,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     }
                                     ?>
                             </select>
-                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>From</label>
@@ -194,12 +188,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     }
                                     ?>
                             </select>
-                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
                             <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
                             <span class="invalid-feedback"><?php echo $message_err;?></span>
+                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
