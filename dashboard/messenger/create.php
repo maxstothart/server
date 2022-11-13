@@ -200,7 +200,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Check input errors before inserting in database
     echo "1";
-    if(empty($uto_err) && empty($message_err)){
+    if(empty($message_err)){
         // Prepare an insert statement
         $sql = "INSERT INTO messenger (uto, message, ufrom) VALUES (?, ?, ?)";
          echo "2";
