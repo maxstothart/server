@@ -165,7 +165,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                         echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
                                     }
                                     } else {
-                                        echo "0 results";
+                                        $sql = "SELECT id, username, aname FROM users";
+                                        $result = mysqli_query($link, $sql);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            while($row = mysqli_fetch_assoc($result)) {
+                                            echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
+                                        }
                                     }
                                     ?>
                             </select>
