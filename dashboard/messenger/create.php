@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     $input_ufrom = trim($_POST["ufrom"]);
         $ufrom = $input_ufrom;
-    }
+    
     
     // Check input errors before inserting in database
     if(empty($uto_err) && empty($message_err) && empty($ufrom_err)){
