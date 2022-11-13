@@ -315,7 +315,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <select id="uto">  
+                            <select id="uto" name="uto">  
                                 <option value="">To</option>
                                 <option value="US">United States of America</option>
                             </select>
