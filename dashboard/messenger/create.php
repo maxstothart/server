@@ -156,7 +156,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <?php
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM friends WHERE user='$username'";
+                    sql = "SELECT * FROM friends WHERE user='$username'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<select id="dbox" name="uto">';
@@ -166,7 +166,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Free result set
                             mysqli_free_result($result);
                         } else{
-                            echo '<div class="alert alert-danger"><em>No Messages were found.</em></div>';
+                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
                         }
                     } else{
                         echo "Oops! Something went wrong. Please try again later.";
