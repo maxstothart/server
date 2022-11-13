@@ -301,7 +301,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <script>
     $(function(){
-        $("#country").select2();
+        $("#uto").select2();
     }); 
 </script>
 </head>
@@ -315,7 +315,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group">
                             <select id="uto">  
                                 <option value="">To</option>
-                                <option value="jadon">jadon</option>
+                                <option value="US">United States of America</option>
                             </select>
                         </div>
                         <div class="form-group">
