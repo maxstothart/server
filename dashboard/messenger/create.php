@@ -317,6 +317,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <option value="">To</option>
                                 <option value="US">United States of America</option>
                             </select>
+                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
