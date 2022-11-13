@@ -158,8 +158,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>To</label>
-                            <select id="dbox" name="uto">  
-                                <option value="">To</option>
+                            <select id="dbox" name="ufrom">  
+                                <option value="<?php echo $username ?>"><?php echo $username ?></option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
                                     $result = mysqli_query($link, $sql);
@@ -169,6 +169,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                         while($row = mysqli_fetch_assoc($result)) {
                                         echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
                                     }
+                                    } else {
+                                        echo "0 results";
                                     }
                                     ?>
                             </select>
