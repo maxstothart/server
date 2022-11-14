@@ -2,12 +2,6 @@
 session_start();
 $username = ($_SESSION["username"]);
 $acctype = ($_SESSION["at"]);
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: /login.php");
-    exit;
-}
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
