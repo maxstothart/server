@@ -21,7 +21,7 @@
   e.preventDefault();
   document.getElementById("popupdarkbg").style.display = "block";
   document.getElementById("popup").style.display = "block";
-  document.getElementById('popupiframe').src = "http://example.com";
+  document.getElementById('popupiframe').src = "http://windmill-inc.com";
   document.getElementById('popupdarkbg').onclick = function() {
       document.getElementById("popup").style.display = "none";
       document.getElementById("popupdarkbg").style.display = "none";
