@@ -168,7 +168,7 @@ li a:hover:not(.active) {
   background-color: #218838;
 }
         .wrapper{
-            width: 600px;
+            width: 6000px;
             margin: 0 auto;
         }
         table tr td:last-child{
