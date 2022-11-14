@@ -374,7 +374,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <select id="uto" name="uto">  
+                            <select id="uto" name="uto" style="height:20px;width:200px">  
                                 <option value="">    To    </option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
