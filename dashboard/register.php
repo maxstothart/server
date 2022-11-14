@@ -34,6 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username_err = "This username is already taken.";
                 } else{
                     $username = trim($_POST["username"]);
+                    $aname = trim($_POST["aname"]);u
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -67,13 +68,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, acctype) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (username, password, acctype, aname) VALUES (?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_password, $param_acctype);
+            mysqli_stmt_bind_param($stmt, "ssss", $param_username, $param_password, $param_acctype, $param_aname);
             
             // Set parameters
+            $param_aname = $aname
             $param_username = $username;
             $param_password = $password; // Creates a password hash
             $param_acctype = "messenger";
@@ -113,7 +115,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
+        <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="aname" class="form-control <?php echo (!empty($aname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $aname; ?>">
+                <span class="invalid-feedback"><?php echo $aname_err; ?></span>
+            </div>   
+        <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
