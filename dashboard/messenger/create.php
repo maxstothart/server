@@ -169,9 +169,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     } else{
                         echo "Oops! Something went wrong. Please try again later.";
                     }
- 
-                    // Close connection
-                    mysqli_close($link);
                     ?>
                         </div>
                         <div class="form-group">
