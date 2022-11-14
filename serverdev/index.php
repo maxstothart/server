@@ -7,10 +7,9 @@
 #popup iframe { width: 100%; height: 100%; border: 0; }
 #popupdarkbg { position: fixed; z-index: 5; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0,0,0,.75); display: none; }
     </style>
-    
 </head>
 <body>
-    <div id="main">
+ 
 <a href="windmill-inc.com" id="link">Click me</a><br>
 </div>
 
