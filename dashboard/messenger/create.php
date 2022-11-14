@@ -253,6 +253,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "4";
                 // Records created successfully. Redirect to landing page
                 header("location: create.php");
+                echo '<script type="text/javascript">',
+                    'redirect();'
+                    'function redirect() {'
+                        'window.top.location.href = 'http://www.example.com';'
+                    '}',
+                    '</script>';
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
