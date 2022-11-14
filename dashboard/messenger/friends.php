@@ -23,9 +23,56 @@
   background-color: #218838;
   color: #111;
 }
+<style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #218838;
+}
+        .wrapper{
+            width: 600px;
+            margin: 0 auto;
+        }
+        table tr td:last-child{
+            width: 120px;
+        }
+    </style>
 </style>
 </head>
 <body>
+    <ul>
+        <li><a href="windmill-inc.com">Home</a></li>
+        <li><a href="/">Dash</a></li>
+        <li><a class="active" href="/messenger">Messenger</a></li>
+        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
+    </ul>
 
 <h1>Vertical Menu</h1>
 
