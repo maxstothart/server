@@ -252,7 +252,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 echo "4";
                 // Records created successfully. Redirect to landing page
-                header("location: create.php");
+                //header("location: create.php");
                 echo '<script type="text/javascript">',
                     'redirect();',
                     'function redirect() {',
