@@ -150,52 +150,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <label>To</label>
-                            <?php
-                    
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM friends WHERE user='$username'";
-                    if($result = mysqli_query($link, $sql)){
-                        if(mysqli_num_rows($result) > 0){
-                            echo '<select id="dbox" name="uto">';
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
-                                }
-                            // Free result set
-                            mysqli_free_result($result);
-                        } else{
-                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
-                        }
-                    } else{
-                        echo "Oops! Something went wrong. Please try again later.";
-                    }
-                    ?>
-                        </div>
-                        <div class="form-group">
-                            <label>From</label>
-                            <?php
-                    
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM users";
-                    if($result = mysqli_query($link, $sql)){
-                        if(mysqli_num_rows($result) > 0){
-                            echo '<select id="dbox" name="uto">';
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
-                                }
-                            // Free result set
-                            mysqli_free_result($result);
-                        } else{
-                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
-                        }
-                    } else{
-                        echo "Oops! Something went wrong. Please try again later.";
-                    }
- 
-                    ?>
-                        </div>
-                        <div class="form-group">
-                            <select id="dbox2" name="ufrom">  
+                            <select id="dbox" name="uto">  
                                 <option value="">To</option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
