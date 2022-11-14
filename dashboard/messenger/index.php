@@ -43,7 +43,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #218838;
 }
         .wrapper{
             width: 600px;
@@ -165,7 +165,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #218838;
 }
         .wrapper{
             width: 600px;
