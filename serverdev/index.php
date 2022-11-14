@@ -168,11 +168,11 @@ li a:hover:not(.active) {
   background-color: #218838;
 }
         .wrapper{
-            width: 6000px;
+            width: 600px;
             margin: 0 auto;
         }
         table tr td:last-child{
-            width: 120px;
+            width: 1200px;
         }
     </style>
     <script>
