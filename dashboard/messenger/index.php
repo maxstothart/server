@@ -73,7 +73,6 @@ li a:hover:not(.active) {
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>  New Message</a>
-                        <a href="/" class="btn btn-success pull-right"><i class="fa fa-plus"></i>Dashboard</a>
                     </div>
                     <?php
                     // Attempt select query execution
@@ -195,7 +194,6 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href='/' class="btn btn-success">Dashboard</a>
                         <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                     </div>
                     <?php
