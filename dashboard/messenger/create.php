@@ -147,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }); 
 </script>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -348,7 +348,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }); 
 </script>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">

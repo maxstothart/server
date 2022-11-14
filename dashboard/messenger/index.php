@@ -64,7 +64,7 @@ li a:hover:not(.active) {
         });
     </script>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <ul>
         <li><a href="windmill-inc.com">Home</a></li>
         <li><a href="/">Dash</a></li>
@@ -215,7 +215,7 @@ li a:hover:not(.active) {
         });
     </script>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <ul>
         <li><a href="windmill-inc.com">Home</a></li>
         <li><a href="/">Dash</a></li>

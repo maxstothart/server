@@ -31,7 +31,7 @@ if (isset($_GET['reboot'])) {
         body{ font: 14px sans-serif; text-align: center; }
     </style>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <h1 class="my-5">Hi, <b>Admin</b>. What do you want to do</h1>
     <p>
         <a href='?reboot=true' class="btn btn-danger ml-3">restart server</a>
@@ -66,7 +66,7 @@ if (isset($_GET['reboot'])) {
         body{ font: 14px sans-serif; text-align: center; }
     </style>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Windmill INC</h1>
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
@@ -89,7 +89,7 @@ if (isset($_GET['reboot'])) {
         body{ font: 14px sans-serif; text-align: center; }
     </style>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Windmill INC</h1>
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
