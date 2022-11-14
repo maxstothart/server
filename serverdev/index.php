@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="main">
-<a href="" id="link">Click me</a><br>
+<a href="windmill-inc.com" id="link">Click me</a><br>
 </div>
 
 <div id="popup"><iframe id="popupiframe"></iframe></div>
