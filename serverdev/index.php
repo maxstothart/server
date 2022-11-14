@@ -174,6 +174,9 @@ li a:hover:not(.active) {
         table tr td:last-child{
             width: 1200px;
         }
+			#popup { display: none; position: fixed; top: 12%; left: 15%; width: 70%; height: 70%; background-color: white; z-index: 10; }
+			#popup iframe { width: 100%; height: 100%; border: 0; }
+			#popupdarkbg { position: fixed; z-index: 5; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0,0,0,.75); display: none; }
     </style>
     <script>
         $(document).ready(function(){
@@ -189,20 +192,26 @@ li a:hover:not(.active) {
         <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
     </ul>
 	<script>
-		$(document).ready(function () {
-    $(".popup").hide();
-    $(".openpop").click(function (e) {
-        e.preventDefault();
-        $("iframe").attr("src", $(this).attr('href'));
-        $(".links").fadeOut('slow');
-        $(".popup").fadeIn('slow');
-    });
+document.getElementById("link").onclick = function(e) {
+  e.preventDefault();
+  document.getElementById("popupdarkbg").style.display = "block";
+  document.getElementById("popup").style.display = "block";
+  document.getElementById('popupiframe').src = "http://example.com";
+  document.getElementById('popupdarkbg').onclick = function() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popupdarkbg").style.display = "none";
+  };
+  return false;
+}
 
-    $(".close").click(function () {
-        $(this).parent().fadeOut("slow");
-        $(".links").fadeIn("slow");
-    });
-});
+window.onkeydown = function(e) {
+    if (e.keyCode == 27) {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popupdarkbg").style.display = "none";
+      e.preventDefault();
+      return;
+    }
+}
 </script>
     <div class="wrapper">
         <div class="container-fluid">
@@ -210,17 +219,13 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-						<div class="links">
-						<a href="create.php" class="btn btn-success pull-right openpop"><i class="fa fa-plus"></i>  New Message</a>
-						</div>
-						<div class="wrapper">
-    						<div class="popup">
-        						<iframe src="">
-            						<p>Your browser does not support iframes.</p>
-        						</iframe>
-								<a href="#" class="close">X</a>
-    </div>
+						<div id="main">
+						<a href="create.php" id="link" class="btn btn-success pull-right openpop"><i class="fa fa-plus"></i>  New Message</a>
+
 </div>
+
+<div id="popup"><iframe id="popupiframe"></iframe></div>
+<div id="popupdarkbg"></div>
                     </div>
                     <?php
                     
