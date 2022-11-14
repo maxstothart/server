@@ -362,7 +362,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <script>
     $(function(){
-        $("#uto").select2();
+        $("#dbox").select2();
     }); 
 </script>
 </head>
