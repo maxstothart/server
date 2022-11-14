@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
-                header("location: index.php");
+                header("location: create.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
