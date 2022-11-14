@@ -219,9 +219,9 @@ window.onkeydown = function(e) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-						<div id="main">
 						<a href="create.php" id="link" class="btn btn-success pull-right openpop"><i class="fa fa-plus"></i>  New Message</a>
-
+						<div id="main">
+<a href="" id="link">Click me</a><br>
 </div>
 
 <div id="popup"><iframe id="popupiframe"></iframe></div>
