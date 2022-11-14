@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username_err = "This username is already taken.";
                 } else{
                     $username = trim($_POST["username"]);
-                    $aname = trim($_POST["aname"]);u
+                    $aname = trim($_POST["aname"]);
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
