@@ -256,7 +256,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo '<script type="text/javascript">',
                     'redirect();',
                     'function redirect() {',
-                    'window.top.location.href = "index.php";',
+                    'window.top.location.href = "#";',
                     '}',
                     '</script>';
                 exit();
