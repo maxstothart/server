@@ -62,10 +62,10 @@ li a:hover:not(.active) {
 </head>
 <body style="background-color: #E3E2DE">
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
+  <li><a href="https://windmill-inc.com">Home</a></li>
+  <li><a href="https://dash.windmill-inc.com">Dash</a></li>
+  <li><a href="/messenger">Messenger</a></li>
+  <li style="float:right"><a class="active" href="/messenger/friends.php">Friends</a></li>
 </ul>
 
 <h1>Vertical Menu</h1>
