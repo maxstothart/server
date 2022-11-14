@@ -60,7 +60,7 @@ li a:hover:not(.active) {
 }
 </style>
 </head>
-<body>
+<body style="background-color: #E3E2DE">
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
