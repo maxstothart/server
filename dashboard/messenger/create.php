@@ -150,7 +150,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h2 class="mt-5">New Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <label>To</label>
+                            <label>To:   </label>
                             <select id="dbox" name="uto" style="height:20px;width:200px">  
                                 <option value="">To</option>
                                 <?php
@@ -169,7 +169,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>From</label>
+                            <label>From: </label>
                             <select id="dbox2" name="ufrom" style="height:20px;width:200px">  
                                 <option value="">From</option>
                                 <?php
