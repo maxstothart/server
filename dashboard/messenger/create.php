@@ -375,7 +375,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <select id="uto" name="uto">  
-                                <option value="">To</option>
+                                <option value="">     To      </option>
                                 <?php
                                     $sql = "SELECT id, username, aname FROM users";
                                     $result = mysqli_query($link, $sql);
