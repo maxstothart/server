@@ -23,8 +23,10 @@
   background-color: #218838;
   color: #111;
 }
+
+</style>
 <style>
-        ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -54,25 +56,17 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #218838;
+  background-color: #04AA6D;
 }
-        .wrapper{
-            width: 600px;
-            margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 120px;
-        }
-    </style>
 </style>
 </head>
 <body>
-    <ul>
-        <li><a href="windmill-inc.com">Home</a></li>
-        <li><a href="/">Dash</a></li>
-        <li><a class="active" href="/messenger">Messenger</a></li>
-        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
-    </ul>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
 
 <h1>Vertical Menu</h1>
 
