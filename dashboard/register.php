@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "ssss", $param_username, $param_password, $param_acctype, $param_aname);
             
             // Set parameters
-            $param_aname = $aname
+            $param_aname = $aname;
             $param_username = $username;
             $param_password = $password; // Creates a password hash
             $param_acctype = "messenger";
