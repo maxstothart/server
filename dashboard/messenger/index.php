@@ -13,6 +13,38 @@ if($acctype == "admin"){
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
         .wrapper{
             width: 600px;
             margin: 0 auto;
@@ -28,6 +60,12 @@ if($acctype == "admin"){
     </script>
 </head>
 <body>
+    <ul>
+        <li><a href="windmill-inc.com">Home</a></li>
+        <li><a href="/">Dash</a></li>
+        <li><a class="active" href="/messenger">Messenger</a></li>
+        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
+    </ul>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
