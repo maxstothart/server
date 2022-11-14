@@ -381,7 +381,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $sql = "SELECT * FROM friends WHERE user='$username'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<select id="dbox" name="uto">';
+                            echo '<select id="dbox" name="uto" style="height:20px;width:50px">';
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
                                 }
