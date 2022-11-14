@@ -72,8 +72,32 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>  New Message</a>
+                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <div id="popup"><iframe id="popupiframe" src="create.php"></iframe></div>
+                        <div id="popupdarkbg"></div>    
                     </div>
+                    <script type="text/javascript">
+        document.getElementById("link").onclick = function(e) {
+  e.preventDefault();
+  document.getElementById("popupdarkbg").style.display = "block";
+  document.getElementById("popup").style.display = "block";
+  document.getElementById('popupiframe').src = "http://windmill-inc.com";
+  document.getElementById('popupdarkbg').onclick = function() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popupdarkbg").style.display = "none";
+  };
+  return false;
+}
+
+window.onkeydown = function(e) {
+    if (e.keyCode == 27) {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popupdarkbg").style.display = "none";
+      e.preventDefault();
+      return;
+    }
+}
+    </script>
                     <?php
                     // Attempt select query execution
                     $sql = "SELECT * FROM messenger";
