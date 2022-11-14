@@ -12,7 +12,7 @@
  
 <a href="windmill-inc.com" id="link">Click me</a><br>
 
-<div id="popup"><iframe id="popupiframe" src="create.php"></iframe></div>
+<div id="popup"><iframe id="popupiframe"></iframe></div>
 <div id="popupdarkbg"></div>
     <script type="text/javascript">
         document.getElementById("link").onclick = function(e) {
