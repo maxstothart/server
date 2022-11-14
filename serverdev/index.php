@@ -11,7 +11,6 @@
 <body>
  
 <a href="windmill-inc.com" id="link">Click me</a><br>
-</div>
 
 <div id="popup"><iframe id="popupiframe" src="https://windmill-inc.com"></iframe></div>
 <div id="popupdarkbg"></div>

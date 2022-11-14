@@ -185,7 +185,25 @@ li a:hover:not(.active) {
             $('[data-toggle="tooltip"]').tooltip();   
         });
     </script>
-        <script type="text/javascript">
+</head>
+<body>
+    <ul>
+        <li><a href="windmill-inc.com">Home</a></li>
+        <li><a href="/">Dash</a></li>
+        <li><a class="active" href="/messenger">Messenger</a></li>
+        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
+    </ul>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5 mb-3 clearfix">
+                        <h2 class="pull-left">Messages</h2>
+                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <div id="popup"><iframe id="popupiframe" src="https://windmill-inc.com"></iframe></div>
+                        <div id="popupdarkbg"></div>
+                    </div>
+                    <script type="text/javascript">
         document.getElementById("link").onclick = function(e) {
   e.preventDefault();
   document.getElementById("popupdarkbg").style.display = "block";
@@ -207,24 +225,6 @@ window.onkeydown = function(e) {
     }
 }
     </script>
-</head>
-<body>
-    <ul>
-        <li><a href="windmill-inc.com">Home</a></li>
-        <li><a href="/">Dash</a></li>
-        <li><a class="active" href="/messenger">Messenger</a></li>
-        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
-    </ul>
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Messages</h2>
-                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup"><iframe id="popupiframe" src="https://windmill-inc.com"></iframe></div>
-                        <div id="popupdarkbg"></div>
-                    </div>
                     <?php
                     
                     // Attempt select query execution
