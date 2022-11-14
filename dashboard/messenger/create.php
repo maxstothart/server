@@ -234,15 +234,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $ufrom = $username;
     
     // Check input errors before inserting in database
-    echo "1";
     if(empty($message_err)){
         // Prepare an insert statement
         $sql = "INSERT INTO messenger (uto, message, ufrom) VALUES (?, ?, ?)";
-         echo "2";
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "sss", $param_uto, $param_message, $param_ufrom);
-            echo "3";
             // Set parameters
             $param_uto = $uto;
             $param_message = $message;
@@ -250,7 +247,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                echo "4";
                 // Records created successfully. Redirect to landing page
                 //header("location: create.php");
                 echo '<script type="text/javascript">',
