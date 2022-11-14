@@ -211,9 +211,7 @@ li a:hover:not(.active) {
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
 						<div class="links">
-						    <a class="openpop" href="http://getbootstrap.com/">Link 1</a>
-						    <a class="openpop" href="http://www.jsfiddle.net">Link 2</a>
-						    <a class="openpop" href="http://www.w3schools.com">Link 3</a>
+						<a href="create.php" class="btn btn-success pull-right openpop"><i class="fa fa-plus"></i>  New Message</a>
 						</div>
 						<div class="wrapper">
     						<div class="popup">
