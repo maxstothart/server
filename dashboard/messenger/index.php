@@ -282,7 +282,7 @@ li a:hover:not(.active) {
                             if (b == 2) {
                                 document.getElementById("popup").innerHTML = "<h2>view</h2>";
                             }
-                            if (b = 3) {
+                            if (b == 3) {
                                 document.getElementById("popup").innerHTML = "<h2>del</h2>";
                             }
                             }
