@@ -1,6 +1,4 @@
-<?php require_once "config.php";
-if($acctype == "admin"){ 
-    echo "ELEVATED PRIVELEDGES: $username"?>
+<?php require_once "config.php";?>
 <?php
 // Check existence of id parameter before processing further
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
