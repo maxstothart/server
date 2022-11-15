@@ -15,7 +15,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $input_uto = trim($_POST["uto"]);
     if(empty($input_uto)){
         $uto_err = "Please enter a recipient.";
-        exit();
     #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
     #    $uto_err = "Please enter a valid name.";
     } else{
@@ -26,7 +25,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $input_message = trim($_POST["message"]);
     if(empty($input_message)){
         $message_err = "Please enter an message.";
-        exit();     
     } else{
         $message = $input_message;
     }
@@ -52,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
-                //echo '<script type="text/javascript">closepopup();</script>',
+                echo '<script type="text/javascript">closepopup();</script>',
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
