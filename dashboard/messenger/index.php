@@ -80,7 +80,7 @@ li a:hover:not(.active) {
                         <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">
                             <h1>test</h1>
-                            <button onclick="closepopup();">test</button>
+                            <input id="clickMe" type="button" value="clickme" onclick="closepopup();" />
                         </div>
                         <div id="popupdarkbg"></div>    
                     </div>
