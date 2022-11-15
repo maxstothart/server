@@ -216,7 +216,11 @@ li a:hover:not(.active) {
                         <a href="" id="message" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">   
                         </div>
-                        <div id="popupdarkbg"></div>    
+                        <div id="popupdarkbg"></div>   
+                        <div id="popup1">  
+                            <h2>hi</h2> 
+                        </div>
+                        <div id="popupdarkbg1"></div>  
                     </div>
                     <?php
                     // Attempt select query execution
