@@ -213,7 +213,7 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="" onclick="popupopen" id="message" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <a href="" onclick="popupopen()" id="message" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">   
                         </div>
                         <div id="popupdarkbg"></div>    
