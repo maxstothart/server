@@ -57,3 +57,15 @@
                             </div>
 
                             document.getElementById("demo").innerHTML = "";
+
+                            function(e) {
+                            showpage(2);
+                            e.preventDefault();
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        }

@@ -350,17 +350,7 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
-                        document.getElementById("viewmessage").addEventListener("click", function(e) {
-                            showpage(2);
-                            e.preventDefault();
-                            document.getElementById("popupdarkbg").style.display = "block";
-                            document.getElementById("popup").style.display = "block";
-                            document.getElementById('popupdarkbg').onclick = function() {
-                                document.getElementById("popup").style.display = "none";
-                                document.getElementById("popupdarkbg").style.display = "none";
-                            };
-                            return false;
-                        });
+                        document.getElementById("viewmessage").addEventListener("click", showpage(2));
                         document.getElementById("delmessage").addEventListener("click", function(e) {
                             showpage(3);
                             e.preventDefault();
