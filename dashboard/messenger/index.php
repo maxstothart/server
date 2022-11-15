@@ -355,8 +355,8 @@ li a:hover:not(.active) {
                                         echo "<td>";
                                             //echo '<a href="read.php?id='. $row['id'] .'" id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             //echo '<a href="delete.php?id='. $row['id'] .'" id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                            echo '<a id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<button id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></button>';
+                                            echo '<button id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></button>';
                                             echo "</td>";
                                     echo "</tr>";
                                 }
