@@ -80,13 +80,14 @@ li a:hover:not(.active) {
                         <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">
                             <h1>test</h1>
+                            <button onClick="closepopup()">test</button>
                         </div>
                         <div id="popupdarkbg"></div>    
                     </div>
                     <script type="text/javascript">
         document.getElementById("link").onclick = function(e) {
   e.preventDefault();
-  
+
   function closepopup() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("popupdarkbg").style.display = "none";
