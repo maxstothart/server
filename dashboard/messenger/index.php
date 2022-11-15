@@ -328,7 +328,28 @@ li a:hover:not(.active) {
                                 </div>
                             </div>`;}
                             if (b == 2) {
-                                document.getElementById("popup").innerHTML = "<h2>view</h2>";
+                                document.getElementById("popup").innerHTML = `    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mt-5 mb-3">View Message</h1>
+                    <div class="form-group">
+                        <label>To</label>
+                        <p><b><?php echo $row["uto"]; ?></b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>From</label>
+                        <p><b><?php echo $row["ufrom"]; ?></b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <p><b><?php echo $row["message"]; ?></b></p>
+                    </div>
+                    <p><a href="index.php" class="btn btn-primary">Back</a></p>
+                </div>
+            </div>        
+        </div>
+    </div>`;
                             }
                             if (b == 3) {
                                 document.getElementById("popup").innerHTML = "<h2>del</h2>";
