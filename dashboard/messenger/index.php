@@ -51,10 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
                 echo '<script type="text/javascript">',
-                'redirect();',
-                'function redirect() {',
-                'window.top.location.href = "http://www.example.com";',
-                '}',
+                'closepopup();',
                 '</script>';
                 exit();
             } else{
