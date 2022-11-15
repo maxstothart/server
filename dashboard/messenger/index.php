@@ -209,8 +209,8 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup">
+                        <a href="" id="link1" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <div id="popup1">
                         <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -262,29 +262,29 @@ li a:hover:not(.active) {
                             <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a onClick="closepopup()" class="btn btn-secondary ml-2">Cancel</a>
+                        <a onClick="closepopup1()" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
         </div>
     </div>
                         </div>
-                        <div id="popupdarkbg"></div>    
+                        <div id="popupdarkbg1"></div>    
                     </div>
                     <script type="text/javascript">
                         function closepopup() {
-                            document.getElementById("popup").style.display = "none";
-                            document.getElementById("popupdarkbg").style.display = "none";
+                            document.getElementById("popup1").style.display = "none";
+                            document.getElementById("popupdarkbg1").style.display = "none";
                             e.preventDefault();
                             return;
                         }
-                        document.getElementById("link").onclick = function(e) {
+                        document.getElementById("link1").onclick = function(e) {
                             e.preventDefault();
-                            document.getElementById("popupdarkbg").style.display = "block";
-                            document.getElementById("popup").style.display = "block";
-                            document.getElementById('popupdarkbg').onclick = function() {
-                                document.getElementById("popup").style.display = "none";
-                                document.getElementById("popupdarkbg").style.display = "none";
+                            document.getElementById("popupdarkbg1").style.display = "block";
+                            document.getElementById("popup1").style.display = "block";
+                            document.getElementById('popupdarkbg1').onclick = function() {
+                                document.getElementById("popup1").style.display = "none";
+                                document.getElementById("popupdarkbg1").style.display = "none";
                             };
                             return false;
                         }
