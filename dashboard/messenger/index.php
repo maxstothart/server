@@ -245,8 +245,8 @@ li a:hover:not(.active) {
                                         echo "<td>" . $row['ufrom'] . "</td>";
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
-                                            echo '<a id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a onClick="test()" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
+                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                             //echo '<a id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
                                             //echo '<a id="delmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
                                             echo "</td>";
@@ -354,6 +354,18 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
+                        for (let el of document.querySelectorAll(".viewmessage")) {
+                        el.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            showpage(2);
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        });}
                         window.onkeydown = function(e) {
                             if (e.keyCode == 27) {
                             closepopup();
