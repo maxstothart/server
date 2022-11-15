@@ -66,7 +66,7 @@ li a:hover:not(.active) {
 </head>
 <body style="background-color: #E3E2DE">
     <ul>
-        <li><a href="windmill-inc.com">Home</a></li>
+        <li><a href="https://windmill-inc.com">Home</a></li>
         <li><a href="/">Dash</a></li>
         <li><a class="active" href="/messenger">Messenger</a></li>
         <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
@@ -79,8 +79,63 @@ li a:hover:not(.active) {
                         <h2 class="pull-left">Messages</h2>
                         <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">
-                            <h1>test</h1>
-                            <input id="clickMe" type="button" value="clickme" onclick="closepopup();" />
+                        <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="mt-5">New Message</h2>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="form-group">
+                            <label>To:   </label>
+                            <select id="dbox" name="uto" style="height:20px;width:200px">  
+                                <option value="">To</option>
+                                <?php
+                                    $sql = "SELECT id, username, aname FROM users";
+                                    $result = mysqli_query($link, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                        // output data of each row
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
+                                    }
+                                    } else {
+                                        echo "0 results";
+                                    }
+                                    ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>From: </label>
+                            <select id="dbox2" name="ufrom" style="height:20px;width:200px">  
+                                <option value="">From</option>
+                                <?php
+                                    $sql = "SELECT id, username, aname FROM users";
+                                    $result = mysqli_query($link, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                        // output data of each row
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
+                                    }
+                                    } else {
+                                        echo "0 results";
+                                    }
+                                    ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
+                            <span class="invalid-feedback"><?php echo $message_err;?></span>
+                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <a onClick="window.top.location.href = 'index.php'" class="btn btn-secondary ml-2">Cancel</a>
+                    </form>
+                </div>
+            </div>        
+        </div>
+    </div>
                         </div>
                         <div id="popupdarkbg"></div>    
                     </div>
@@ -101,13 +156,12 @@ li a:hover:not(.active) {
                             };
                             return false;
                         }
-
-window.onkeydown = function(e) {
-    if (e.keyCode == 27) {
-        closepopup();
-    }
-}
-    </script>
+                        window.onkeydown = function(e) {
+                            if (e.keyCode == 27) {
+                            closepopup();
+                            }
+                        }
+                    </script>
                     <?php
                     // Attempt select query execution
                     $sql = "SELECT * FROM messenger";
