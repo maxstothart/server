@@ -332,8 +332,15 @@ li a:hover:not(.active) {
                             if (b == 3) {
                                 document.getElementById("popup").innerHTML = "<h2>del</h2>";
                             }
-                            function(e) {
-                            showpage(3);
+                            }
+                        function closepopup() {
+                            document.getElementById("popup").style.display = "none";
+                            document.getElementById("popupdarkbg").style.display = "none";
+                            e.preventDefault();
+                            return;
+                        }
+                        document.getElementById("addmessage").addEventListener("click", function(e) {
+                            showpage(2);
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
@@ -342,15 +349,7 @@ li a:hover:not(.active) {
                                 document.getElementById("popupdarkbg").style.display = "none";
                             };
                             return false;
-                        }
-                            }
-                        function closepopup() {
-                            document.getElementById("popup").style.display = "none";
-                            document.getElementById("popupdarkbg").style.display = "none";
-                            e.preventDefault();
-                            return;
-                        }
-                        document.getElementById("addmessage").addEventListener("click", showpage(1));
+                        });
                         document.getElementById("viewmessage").addEventListener("click", showpage(2));
                         document.getElementById("delmessage").addEventListener("click", function(e) {
                             showpage(3);
