@@ -220,7 +220,6 @@ li a:hover:not(.active) {
                     </div>
                     <script type="text/javascript">
                             function showpage(b) {
-                                b=1;
                                 if (b != 0) {
                         		document.getElementById("popup").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
