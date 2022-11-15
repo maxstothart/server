@@ -339,7 +339,7 @@ li a:hover:not(.active) {
                             e.preventDefault();
                             return;
                         }
-                        document.getElementById("addmessage").onclick = function(e) {
+                        document.getElementById("addmessage").addEventListener("click", function(e) {
                             showpage(1);
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
@@ -349,7 +349,7 @@ li a:hover:not(.active) {
                                 document.getElementById("popupdarkbg").style.display = "none";
                             };
                             return false;
-                        }
+                        });
                         document.getElementById("viewmessage").onclick = function(e) {
                             showpage(2);
                             e.preventDefault();
