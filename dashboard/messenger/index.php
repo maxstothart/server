@@ -213,7 +213,7 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="" id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <a href="" onclick="showpage(1)" id="message" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">   
                         </div>
                         <div id="popupdarkbg"></div>    
@@ -339,9 +339,8 @@ li a:hover:not(.active) {
                             e.preventDefault();
                             return;
                         }
-                        document.getElementById("addmessage").addEventListener("click", function(e) {
+                        document.getElementById("message").addEventListener("click", function(e) {
                             e.preventDefault();
-                            showpage(1);
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
