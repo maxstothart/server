@@ -78,7 +78,7 @@ li a:hover:not(.active) {
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
                         <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup"><iframe id="popupiframe" src="create.php" sandbox="allow-top-navigation allow-scripts allow-forms"></iframe></div>
+                        <div id="popup"></div>
                         <div id="popupdarkbg"></div>    
                     </div>
                     <script type="text/javascript">
