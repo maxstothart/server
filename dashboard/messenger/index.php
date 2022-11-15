@@ -341,6 +341,7 @@ li a:hover:not(.active) {
                         }
                         document.getElementById("addmessage").addEventListener("click", function(e) {
                             showpage(1);
+                            e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
@@ -349,8 +350,9 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
-                        document.getElementById("viewmessage").addEventListener("click", function(e) {
+                        document.getElementById("viewmessage").addEventListener("click", function(f) {
                             showpage(2);
+                            f.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
@@ -359,8 +361,9 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
-                        document.getElementById("delmessage").addEventListener("click", function(e) {
+                        document.getElementById("delmessage").addEventListener("click", function(g) {
                             showpage(3);
+                            g.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
