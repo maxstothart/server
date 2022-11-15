@@ -341,7 +341,6 @@ li a:hover:not(.active) {
                         }
                         document.getElementById("addmessage").addEventListener("click", function(e) {
                             showpage(1);
-                            e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
@@ -352,7 +351,6 @@ li a:hover:not(.active) {
                         });
                         document.getElementById("viewmessage").addEventListener("click", function(e) {
                             showpage(2);
-                            e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
@@ -363,7 +361,6 @@ li a:hover:not(.active) {
                         });
                         document.getElementById("delmessage").addEventListener("click", function(e) {
                             showpage(3);
-                            e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
