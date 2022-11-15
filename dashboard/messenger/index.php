@@ -354,7 +354,6 @@ li a:hover:not(.active) {
                         for (let el of document.querySelectorAll(".viewmessage")) {
                         el.addEventListener("click", async function(e) {
                             e.preventDefault();
-                            debugger
                             let response = await fetch("read.php?id="+e.target.parentElement.dataset.id)
                             document.getElementById("popup").innerHTML = await response.text();
                             document.getElementById("popupdarkbg").style.display = "block";
@@ -366,9 +365,10 @@ li a:hover:not(.active) {
                             return false;
                         });}
                         for (let el of document.querySelectorAll(".delmessage")) {
-                        el.addEventListener("click", function(e) {
+                        el.addEventListener("click", async function(e) {
                             e.preventDefault();
-                            showpage(3);
+                            let response = await fetch("delete.php?id="+e.target.parentElement.dataset.id)
+                            document.getElementById("popup").innerHTML = await response.text();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
