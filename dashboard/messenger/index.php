@@ -264,7 +264,7 @@ li a:hover:not(.active) {
                             <span class="invalid-feedback"><?php echo $uto_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a onClick="window.top.location.href = 'index.php'" class="btn btn-secondary ml-2">Cancel</a>
+                        <a onClick="closepopup()" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
