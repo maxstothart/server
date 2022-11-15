@@ -100,7 +100,7 @@ li a:hover:not(.active) {
 }
 
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
