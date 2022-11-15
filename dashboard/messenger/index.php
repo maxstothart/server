@@ -268,7 +268,7 @@ li a:hover:not(.active) {
     </div>
     <script type="text/javascript">
                             function showpage(b) {
-                                if (b != 0) {
+                                if (b == 1) {
                         		document.getElementById("popup").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
                                     <div class="row">
@@ -341,6 +341,7 @@ li a:hover:not(.active) {
                         }
                         document.getElementById("message").addEventListener("click", function(e) {
                             e.preventDefault();
+                            showpage(1);
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
