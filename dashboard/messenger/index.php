@@ -339,10 +339,9 @@ li a:hover:not(.active) {
                             e.preventDefault();
                             return;
                         }
-
-                        document.getElementById("viewmessage").addEventListener("click", function(f) {
-                            showpage(2);
-                            f.preventDefault();
+                        document.getElementById("addmessage").addEventListener("click", function(e) {
+                            e.preventDefault();
+                            showpage(1);
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
@@ -351,9 +350,20 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
-                        document.getElementById("delmessage").addEventListener("click", function(g) {
+                        document.getElementById("viewmessage").addEventListener("click", function(e) {
+                            e.preventDefault();
+                            showpage(2);
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        });
+                        document.getElementById("delmessage").addEventListener("click", function(e) {
+                            e.preventDefault();
                             showpage(3);
-                            g.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
