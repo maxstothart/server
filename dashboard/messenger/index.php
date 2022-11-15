@@ -213,10 +213,15 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="" onclick="showpage(1)" id="message" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup">   
-                        </div>
-                        <div id="popupdarkbg"></div>    
+                        <a href="" id="myBtn" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div id="popupthing"></div>
+                            </div>
+                        </div>    
                     </div>
                     <?php
                     // Attempt select query execution
@@ -267,9 +272,21 @@ li a:hover:not(.active) {
         </div>
     </div>
     <script type="text/javascript">
+        var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
                             function showpage(b) {
                                 if (b == 1) {
-                        		document.getElementById("popup").innerHTML = `<div class="wrapper">
+                        		document.getElementById("popupthing").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12">
