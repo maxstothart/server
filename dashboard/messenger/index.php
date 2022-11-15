@@ -334,7 +334,7 @@ li a:hover:not(.active) {
                     }
  
                     // Close connection
-                    mysqli_close($link);
+                    //mysqli_close($link);
                     ?>
                 </div>
             </div>        
