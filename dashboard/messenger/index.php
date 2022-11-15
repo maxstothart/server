@@ -213,7 +213,7 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="" id="myBtn" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <a id="myBtn" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
