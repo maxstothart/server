@@ -86,9 +86,15 @@ li a:hover:not(.active) {
                     <script type="text/javascript">
         document.getElementById("link").onclick = function(e) {
   e.preventDefault();
+  
+  function closepopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("popupdarkbg").style.display = "none";
+    e.preventDefault();
+    return;
+  }
   document.getElementById("popupdarkbg").style.display = "block";
   document.getElementById("popup").style.display = "block";
-  document.getElementById('popupiframe').src = "http://windmill-inc.com";
   document.getElementById('popupdarkbg').onclick = function() {
       document.getElementById("popup").style.display = "none";
       document.getElementById("popupdarkbg").style.display = "none";
@@ -98,10 +104,7 @@ li a:hover:not(.active) {
 
 window.onkeydown = function(e) {
     if (e.keyCode == 27) {
-      document.getElementById("popup").style.display = "none";
-      document.getElementById("popupdarkbg").style.display = "none";
-      e.preventDefault();
-      return;
+        closepopup();
     }
 }
     </script>
