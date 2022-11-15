@@ -63,6 +63,15 @@ li a:hover:not(.active) {
             $('[data-toggle="tooltip"]').tooltip();   
         });
     </script>
+    <script>
+    $(function(){
+        $("#dbox").select2();
+    }); 
+
+    $(function(){
+        $("#dbox2").select2();
+    }); 
+</script>
 </head>
 <body style="background-color: #E3E2DE">
     <ul>
