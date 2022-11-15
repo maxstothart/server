@@ -1,6 +1,73 @@
 <?php require_once "config.php";
 if($acctype == "admin"){ 
     echo "ELEVATED PRIVELEDGES: $username"?>
+<?php
+// Include config file
+require "config.php";
+ 
+// Define variables and initialize with empty values
+$uto = $message = $ufrom = "";
+$uto_err = $message_err = $ufrom_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    // Validate name
+    $input_uto = trim($_POST["uto"]);
+    if(empty($input_uto)){
+        $uto_err = "Please enter a recipient.";
+    #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+    #    $uto_err = "Please enter a valid name.";
+    } else{
+        $uto = $input_uto;
+    }
+    
+    // Validate address
+    $input_message = trim($_POST["message"]);
+    if(empty($input_message)){
+        $message_err = "Please enter an message.";     
+    } else{
+        $message = $input_message;
+    }
+    
+    $input_ufrom = trim($_POST["ufrom"]);
+        $ufrom = $input_ufrom;
+    
+    
+    // Check input errors before inserting in database
+    if(empty($uto_err) && empty($message_err) && empty($ufrom_err)){
+        // Prepare an insert statement
+        $sql = "INSERT INTO messenger (uto, message, ufrom) VALUES (?, ?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "sss", $param_uto, $param_message, $param_ufrom);
+            
+            // Set parameters
+            $param_uto = $uto;
+            $param_message = $message;
+            $param_ufrom = $ufrom;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Records created successfully. Redirect to landing page
+                echo '<script type="text/javascript">',
+                'redirect();',
+                'function redirect() {',
+                'window.top.location.href = "http://www.example.com";',
+                '}',
+                '</script>';
+                exit();
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        }
+         
+        // Close statement
+    }
+    
+    // Close connection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
