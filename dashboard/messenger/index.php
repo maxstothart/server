@@ -243,8 +243,8 @@ li a:hover:not(.active) {
                                         echo "<td>";
                                             //echo '<a href="read.php?id='. $row['id'] .'" id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             //echo '<a href="delete.php?id='. $row['id'] .'" id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                            echo '<a id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<a href="" id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
+                                            echo '<a href="" id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
                                             echo "</td>";
                                     echo "</tr>";
                                 }
@@ -268,7 +268,7 @@ li a:hover:not(.active) {
     </div>
     <script type="text/javascript">
                             function showpage(b) {
-                                if (b == 1) {
+                                if (b != 0) {
                         		document.getElementById("popup").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
                                     <div class="row">
@@ -340,6 +340,17 @@ li a:hover:not(.active) {
                             return;
                         }
                         document.getElementById("addmessage").addEventListener("click", function(e) {
+                            showpage(1);
+                            e.preventDefault();
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        });
+                        document.getElementById("viewmessage").addEventListener("click", function(e) {
                             showpage(2);
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
@@ -350,7 +361,6 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
-                        document.getElementById("viewmessage").addEventListener("click", showpage(2));
                         document.getElementById("delmessage").addEventListener("click", function(e) {
                             showpage(3);
                             e.preventDefault();
