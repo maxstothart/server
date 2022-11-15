@@ -67,7 +67,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <label>Message</label>
                         <p><b><?php echo $row["message"]; ?></b></p>
                     </div>
-                    <p><a href="index.php" class="btn btn-primary">Back</a></p>
+                    <p><a onClick="closepopup()" class="btn btn-primary">Back</a></p>
                 </div>
             </div>        
         </div>
