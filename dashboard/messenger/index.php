@@ -190,7 +190,36 @@ li a:hover:not(.active) {
         });
     </script>
     <script>
-		document.getElementById("popup").innerHTML = `<div class="wrapper">
+
+    $(function(){
+        $("#dbox").select2();
+    }); 
+
+    $(function(){
+        $("#dbox2").select2();
+    }); 
+</script>
+</head>
+<body style="background-color: #E3E2DE">
+    <ul>
+        <li><a href="https://windmill-inc.com">Home</a></li>
+        <li><a href="/">Dash</a></li>
+        <li><a class="active" href="/messenger">Messenger</a></li>
+        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
+    </ul>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5 mb-3 clearfix">
+                        <h2 class="pull-left">Messages</h2>
+                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <div id="popup">   
+                        </div>
+                        <div id="popupdarkbg"></div>    
+                    </div>
+                    <script type="text/javascript">
+                        		document.getElementById("popup").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -247,34 +276,6 @@ li a:hover:not(.active) {
                                     </div>        
                                 </div>
                             </div>`;
-    $(function(){
-        $("#dbox").select2();
-    }); 
-
-    $(function(){
-        $("#dbox2").select2();
-    }); 
-</script>
-</head>
-<body style="background-color: #E3E2DE">
-    <ul>
-        <li><a href="https://windmill-inc.com">Home</a></li>
-        <li><a href="/">Dash</a></li>
-        <li><a class="active" href="/messenger">Messenger</a></li>
-        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
-    </ul>
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Messages</h2>
-                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup">   
-                        </div>
-                        <div id="popupdarkbg"></div>    
-                    </div>
-                    <script type="text/javascript">
                         function closepopup() {
                             document.getElementById("popup").style.display = "none";
                             document.getElementById("popupdarkbg").style.display = "none";
