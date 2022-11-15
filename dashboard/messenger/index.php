@@ -1,71 +1,6 @@
 <?php require_once "config.php";
 if($acctype == "admin"){ 
     echo "ELEVATED PRIVELEDGES: $username"?>
-<?php
-// Include config file
-require "config.php";
- 
-// Define variables and initialize with empty values
-$uto = $message = $ufrom = "";
-$uto_err = $message_err = $ufrom_err = "";
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Validate name
-    $input_uto = trim($_POST["uto"]);
-    if(empty($input_uto)){
-        $uto_err = "Please enter a recipient.";
-    #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-    #    $uto_err = "Please enter a valid name.";
-    } else{
-        $uto = $input_uto;
-    }
-    
-    // Validate address
-    $input_message = trim($_POST["message"]);
-    if(empty($input_message)){
-        $message_err = "Please enter an message.";
-    } else{
-        $message = $input_message;
-    }
-    
-    $input_ufrom = trim($_POST["ufrom"]);
-        $ufrom = $input_ufrom;
-    
-    
-    // Check input errors before inserting in database
-    if(empty($uto_err) && empty($message_err) && empty($ufrom_err)){
-        // Prepare an insert statement
-        $sql = "INSERT INTO messenger (uto, message, ufrom) VALUES (?, ?, ?)";
-         
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_uto, $param_message, $param_ufrom);
-            
-            // Set parameters
-            $param_uto = $uto;
-            $param_message = $message;
-            $param_ufrom = $ufrom;
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Records created successfully. Redirect to landing page
-                header('Location: '."/messenger");
-                exit();
-                //return();
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-            exit();
-        }
-         
-        // Close statement
-    }
-    
-    // Close connection
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,132 +53,15 @@ li a:hover:not(.active) {
             width: 120px;
         }
     </style>
-    <style>
-        .wrapper{
-            width: 600px;
-            margin: 0 auto;
-        }
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-#myInput {
-  box-sizing: border-box;
-  background-image: url('searchicon.png');
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-#myInput:focus {outline: 3px solid #ddd;}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
-    <style>
-        #popup { display: none; position: fixed; top: 12%; left: 15%; width: 70%; height: 70%; background-color: white; z-index: 10; }
-        #popup iframe { width: 100%; height: 100%; border: 0; }
-        #popupdarkbg { position: fixed; z-index: 5; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0,0,0,.75); display: none; }
-    </style>
-    <style>
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
         });
     </script>
-    <script>
-
-    $(function(){
-        $("#dbox").select2();
-    }); 
-
-    $(function(){
-        $("#dbox2").select2();
-    }); 
-</script>
 </head>
-<body style="background-color: #E3E2DE">
+<body>
     <ul>
-        <li><a href="https://windmill-inc.com">Home</a></li>
+        <li><a href="windmill-inc.com">Home</a></li>
         <li><a href="/">Dash</a></li>
         <li><a class="active" href="/messenger">Messenger</a></li>
         <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
@@ -254,48 +72,7 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a id="myBtn" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-var btn2 = document.getElementById("myBtn2");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-btn2.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>   
+                        <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>  New Message</a>
                     </div>
                     <?php
                     // Attempt select query execution
@@ -320,11 +97,9 @@ window.onclick = function(event) {
                                         echo "<td>" . $row['ufrom'] . "</td>";
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
-                                            echo '<a href="" onclick="showpage(1)" id="message" class="mr-3" title="View Message"><span class="fa fa-eye"></span></a>';
-                                            echo '<a href="" onclick="showpage(2)" id="message" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                            //echo '<a id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
-                                            //echo '<a id="delmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
-                                            echo "</td>";
+                                            echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
+                                            echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                        echo "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
@@ -339,101 +114,12 @@ window.onclick = function(event) {
                     }
  
                     // Close connection
-                    //mysqli_close($link);
+                    mysqli_close($link);
                     ?>
                 </div>
             </div>        
         </div>
     </div>
-    <script type="text/javascript">
-                            function showpage(b) {
-                                if (b == 1) {
-                        		document.getElementById("popupthing").innerHTML = `<div class="wrapper">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h2 class="mt-5">New Message</h2>
-                                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                                                <div class="form-group">
-                                                    <label>To:   </label>
-                                                    <select id="dbox" name="uto" style="height:20px;width:200px">  
-                                                        <option value="">To</option>
-                                                            <?php
-                                                                $sql = "SELECT id, username, aname FROM users";
-                                                                $result = mysqli_query($link, $sql);
-
-                                                                if (mysqli_num_rows($result) > 0) {
-                                                                    // output data of each row
-                                                                    while($row = mysqli_fetch_assoc($result)) {
-                                                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                                                    }
-                                                                } else {
-                                                                    echo "0 results";
-                                                                }
-                                                            ?>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>From: </label>
-                                                    <select id="dbox2" name="ufrom" style="height:20px;width:200px">  
-                                                        <option value="">From</option>
-                                                            <?php
-                                                                $sql = "SELECT id, username, aname FROM users";
-                                                                $result = mysqli_query($link, $sql);
-
-                                                                if (mysqli_num_rows($result) > 0) {
-                                                                    // output data of each row
-                                                                    while($row = mysqli_fetch_assoc($result)) {
-                                                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                                                    }
-                                                                } else {
-                                                                    echo "0 results";
-                                                                }
-                                                            ?>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Message</label>
-                                                    <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
-                                                    <span class="invalid-feedback"><?php echo $message_err;?></span>
-                                                    <span class="invalid-feedback"><?php echo $uto_err;?></span>
-                                                </div>
-                                                <input type="submit" class="btn btn-primary" value="Submit">
-                                                <a onClick="closepopup()" class="btn btn-secondary ml-2">Cancel</a>
-                                            </form>
-                                        </div>
-                                    </div>        
-                                </div>
-                            </div>`;}
-                            if (b == 2) {
-                                document.getElementById("popup").innerHTML = "<h2>view</h2>";
-                            }
-                            if (b == 3) {
-                                document.getElementById("popup").innerHTML = "<h2>del</h2>";
-                            }
-                            }
-                        function closepopup() {
-                            document.getElementById("popup").style.display = "none";
-                            document.getElementById("popupdarkbg").style.display = "none";
-                            e.preventDefault();
-                            return;
-                        }
-                        document.getElementById("message").addEventListener("click", function(e) {
-                            e.preventDefault();
-                            document.getElementById("popupdarkbg").style.display = "block";
-                            document.getElementById("popup").style.display = "block";
-                            document.getElementById('popupdarkbg').onclick = function() {
-                                document.getElementById("popup").style.display = "none";
-                                document.getElementById("popupdarkbg").style.display = "none";
-                            };
-                            return false;
-                        });
-                        window.onkeydown = function(e) {
-                            if (e.keyCode == 27) {
-                            closepopup();
-                            }
-                        }
-                    </script>
 </body>
 </html>
 <?php }else{ ?>
@@ -499,25 +185,7 @@ li a:hover:not(.active) {
             $('[data-toggle="tooltip"]').tooltip();   
         });
     </script>
-</head>
-<body style="background-color: #E3E2DE">
-    <ul>
-        <li><a href="windmill-inc.com">Home</a></li>
-        <li><a href="/">Dash</a></li>
-        <li><a class="active" href="/messenger">Messenger</a></li>
-        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
-    </ul>
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Messages</h2>
-                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup"><iframe id="popupiframe" src="create.php"></iframe></div>
-                        <div id="popupdarkbg"></div>
-                    </div>
-                    <script type="text/javascript">
+        <script type="text/javascript">
         document.getElementById("link").onclick = function(e) {
   e.preventDefault();
   document.getElementById("popupdarkbg").style.display = "block";
@@ -539,6 +207,24 @@ window.onkeydown = function(e) {
     }
 }
     </script>
+</head>
+<body>
+    <ul>
+        <li><a href="windmill-inc.com">Home</a></li>
+        <li><a href="/">Dash</a></li>
+        <li><a class="active" href="/messenger">Messenger</a></li>
+        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
+    </ul>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5 mb-3 clearfix">
+                        <h2 class="pull-left">Messages</h2>
+                        <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <div id="popup"><iframe id="popupiframe" src="https://windmill-inc.com"></iframe></div>
+                        <div id="popupdarkbg"></div>
+                    </div>
                     <?php
                     
                     // Attempt select query execution
@@ -586,7 +272,6 @@ window.onkeydown = function(e) {
             </div>        
         </div>
     </div>
-    
 </body>
 </html>
 <?php } ?>
