@@ -352,9 +352,10 @@ li a:hover:not(.active) {
                             return false;
                         });
                         for (let el of document.querySelectorAll(".viewmessage")) {
-                        el.addEventListener("click", function(e) {
+                        el.addEventListener("click", async function(e) {
                             e.preventDefault();
-                            fetch("read.php?id="+e.target.dataset.id).then(function(d) {document.getElementById("popup").innerHTML = d.text});
+                            let response = await fetch("read.php?id="+e.target.dataset.id)
+                            document.getElementById("popup").innerHTML = await response.text();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
