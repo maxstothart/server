@@ -354,7 +354,7 @@ li a:hover:not(.active) {
                         for (let el of document.querySelectorAll(".viewmessage")) {
                         el.addEventListener("click", function(e) {
                             e.preventDefault();
-                            document.getElementById("popup").innerHTML = fetch("read.php?id="+e.target.dataset.id);
+                            fetch("read.php?id="+e.target.dataset.id).then(function(d) {document.getElementById("popup").innerHTML = d.body});
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
                             document.getElementById('popupdarkbg').onclick = function() {
