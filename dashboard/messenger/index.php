@@ -218,7 +218,55 @@ li a:hover:not(.active) {
                         </div>
                         <div id="popupdarkbg"></div>    
                     </div>
-                    <script type="text/javascript">
+                    <?php
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM messenger";
+                    if($result = mysqli_query($link, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<table class="table table-bordered table-striped">';
+                                echo "<thead>";
+                                    echo "<tr>";
+                                        echo "<th>#</th>";
+                                        echo "<th>To</th>";
+                                        echo "<th>From</th>";
+                                        echo "<th>Message</th>";
+                                        echo "<th>Action</th>";
+                                    echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<tr>";
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['uto'] . "</td>";
+                                        echo "<td>" . $row['ufrom'] . "</td>";
+                                        echo "<td>" . $row['message'] . "</td>";
+                                        echo "<td>";
+                                            //echo '<a href="read.php?id='. $row['id'] .'" id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
+                                            //echo '<a href="delete.php?id='. $row['id'] .'" id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<button id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></button>';
+                                            echo '<button id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></button>';
+                                            echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";                            
+                            echo "</table>";
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>No Messages were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+ 
+                    // Close connection
+                    //mysqli_close($link);
+                    ?>
+                </div>
+            </div>        
+        </div>
+    </div>
+    <script type="text/javascript">
                             function showpage(b) {
                                 if (b != 0) {
                         		document.getElementById("popup").innerHTML = `<div class="wrapper">
@@ -330,54 +378,6 @@ li a:hover:not(.active) {
                             }
                         }
                     </script>
-                    <?php
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM messenger";
-                    if($result = mysqli_query($link, $sql)){
-                        if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table table-bordered table-striped">';
-                                echo "<thead>";
-                                    echo "<tr>";
-                                        echo "<th>#</th>";
-                                        echo "<th>To</th>";
-                                        echo "<th>From</th>";
-                                        echo "<th>Message</th>";
-                                        echo "<th>Action</th>";
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['uto'] . "</td>";
-                                        echo "<td>" . $row['ufrom'] . "</td>";
-                                        echo "<td>" . $row['message'] . "</td>";
-                                        echo "<td>";
-                                            //echo '<a href="read.php?id='. $row['id'] .'" id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            //echo '<a href="delete.php?id='. $row['id'] .'" id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                            echo '<button id="readmessage" class="mr-3" title="View Message" data-toggle="tooltip"><span id="readmessage" class="fa fa-eye"></span></button>';
-                                            echo '<button id="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></button>';
-                                            echo "</td>";
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                            echo "</table>";
-                            // Free result set
-                            mysqli_free_result($result);
-                        } else{
-                            echo '<div class="alert alert-danger"><em>No Messages were found.</em></div>';
-                        }
-                    } else{
-                        echo "Oops! Something went wrong. Please try again later.";
-                    }
- 
-                    // Close connection
-                    //mysqli_close($link);
-                    ?>
-                </div>
-            </div>        
-        </div>
-    </div>
 </body>
 </html>
 <?php }else{ ?>
@@ -530,6 +530,7 @@ window.onkeydown = function(e) {
             </div>        
         </div>
     </div>
+    
 </body>
 </html>
 <?php } ?>
