@@ -245,11 +245,8 @@ li a:hover:not(.active) {
                                         echo "<td>" . $row['ufrom'] . "</td>";
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
-                                            echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                            //echo '<a id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
-                                            //echo '<a id="delmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
-                                            echo "</td>";
+                                            echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
+                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';echo "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
