@@ -52,6 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Records created successfully. Redirect to landing page
                 echo '<script type="text/javascript">closepopup();</script>',
                 //exit();
+                return();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
