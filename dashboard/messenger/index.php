@@ -366,6 +366,18 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });}
+                        for (let el of document.querySelectorAll(".delmessage")) {
+                        el.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            showpage(3);
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        });}
                         window.onkeydown = function(e) {
                             if (e.keyCode == 27) {
                             closepopup();
