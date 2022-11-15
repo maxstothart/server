@@ -50,9 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
-                echo '<script type="text/javascript">',
-                'closepopup();',
-                '</script>';
+                echo '<script type="text/javascript">closepopup();</script>',
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
