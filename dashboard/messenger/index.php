@@ -339,17 +339,7 @@ li a:hover:not(.active) {
                             e.preventDefault();
                             return;
                         }
-                        document.getElementById("addmessage").addEventListener("click", function(e) {
-                            showpage(1);
-                            e.preventDefault();
-                            document.getElementById("popupdarkbg").style.display = "block";
-                            document.getElementById("popup").style.display = "block";
-                            document.getElementById('popupdarkbg').onclick = function() {
-                                document.getElementById("popup").style.display = "none";
-                                document.getElementById("popupdarkbg").style.display = "none";
-                            };
-                            return false;
-                        });
+
                         document.getElementById("viewmessage").addEventListener("click", function(f) {
                             showpage(2);
                             f.preventDefault();
