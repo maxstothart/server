@@ -354,6 +354,7 @@ li a:hover:not(.active) {
                         for (let el of document.querySelectorAll(".viewmessage")) {
                         el.addEventListener("click", async function(e) {
                             e.preventDefault();
+                            debugger
                             let response = await fetch("read.php?id="+e.target.dataset.id)
                             document.getElementById("popup").innerHTML = await response.text();
                             document.getElementById("popupdarkbg").style.display = "block";
