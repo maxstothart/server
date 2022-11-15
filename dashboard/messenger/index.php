@@ -242,7 +242,7 @@ li a:hover:not(.active) {
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
                                             echo '<a href="" onclick="showpage(1)" id="message" class="mr-3" title="View Message"><span class="fa fa-eye"></span></a>';
-                                            echo '<a id="message" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<a href="" onclick="showpage(2)" id="message" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                             //echo '<a id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
                                             //echo '<a id="delmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>';
                                             echo "</td>";
@@ -268,7 +268,7 @@ li a:hover:not(.active) {
     </div>
     <script type="text/javascript">
                             function showpage(b) {
-                                if (b != 0) {
+                                if (b == 1) {
                         		document.getElementById("popup").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
                                     <div class="row">
