@@ -176,9 +176,9 @@ li a:hover:not(.active) {
 .show {display: block;}
 </style>
     <style>
-        #popup { display: none; position: fixed; top: 12%; left: 15%; width: 70%; height: 70%; background-color: white; z-index: 10; }
-        #popup iframe { width: 100%; height: 100%; border: 0; }
-        #popupdarkbg { position: fixed; z-index: 5; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0,0,0,.75); display: none; }
+        .popup { display: none; position: fixed; top: 12%; left: 15%; width: 70%; height: 70%; background-color: white; z-index: 10; }
+        .popup iframe { width: 100%; height: 100%; border: 0; }
+        .popupdarkbg { position: fixed; z-index: 5; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0,0,0,.75); display: none; }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -214,13 +214,13 @@ li a:hover:not(.active) {
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
                         <a href="" id="message" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup">   
+                        <div id="popup" class="popup">   
                         </div>
-                        <div id="popupdarkbg"></div>   
-                        <div id="popup1">  
+                        <div id="popupdarkbg" class="popupdarkbg"></div>   
+                        <div id="popup1" class="popup">  
                             <h2>hi</h2> 
                         </div>
-                        <div id="popupdarkbg1"></div>  
+                        <div id="popupdarkbg1" class="popupdarkbg"></div>  
                     </div>
                     <?php
                     // Attempt select query execution
