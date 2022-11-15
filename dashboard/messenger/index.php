@@ -213,13 +213,14 @@ li a:hover:not(.active) {
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
-                        <a href="" id="link" onclick="showpage();" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
+                        <a href="" id="addmessage" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">   
                         </div>
                         <div id="popupdarkbg"></div>    
                     </div>
                     <script type="text/javascript">
-                            function showpage() {
+                            function showpage(b) {
+                                if (b == 1) {
                         		document.getElementById("popup").innerHTML = `<div class="wrapper">
                                 <div class="container-fluid">
                                     <div class="row">
@@ -276,7 +277,13 @@ li a:hover:not(.active) {
                                         </div>
                                     </div>        
                                 </div>
-                            </div>`;
+                            </div>`;}
+                            if (b == 2) {
+
+                            }
+                            if (b = 3) {
+
+                            }
                             }
                         function closepopup() {
                             document.getElementById("popup").style.display = "none";
@@ -284,7 +291,30 @@ li a:hover:not(.active) {
                             e.preventDefault();
                             return;
                         }
-                        document.getElementById("link").onclick = function(e) {
+                        document.getElementById("addmessage").onclick = function(e) {
+                            showpage(1);
+                            e.preventDefault();
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        }
+                        document.getElementById("viewmessage").onclick = function(e) {
+                            showpage(2);
+                            e.preventDefault();
+                            document.getElementById("popupdarkbg").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                            document.getElementById('popupdarkbg').onclick = function() {
+                                document.getElementById("popup").style.display = "none";
+                                document.getElementById("popupdarkbg").style.display = "none";
+                            };
+                            return false;
+                        }
+                        document.getElementById("delmessage").onclick = function(e) {
+                            showpage(3);
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
