@@ -350,7 +350,7 @@ li a:hover:not(.active) {
                             };
                             return false;
                         });
-                        document.getElementById("viewmessage").onclick = function(e) {
+                        document.getElementById("viewmessage").addEventListener("click", function(e) {
                             showpage(2);
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
@@ -360,8 +360,8 @@ li a:hover:not(.active) {
                                 document.getElementById("popupdarkbg").style.display = "none";
                             };
                             return false;
-                        }
-                        document.getElementById("delmessage").onclick = function(e) {
+                        });
+                        document.getElementById("delmessage").addEventListener("click", function(e) {
                             showpage(3);
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
@@ -371,7 +371,7 @@ li a:hover:not(.active) {
                                 document.getElementById("popupdarkbg").style.display = "none";
                             };
                             return false;
-                        }
+                        });
                         window.onkeydown = function(e) {
                             if (e.keyCode == 27) {
                             closepopup();
