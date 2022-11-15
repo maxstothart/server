@@ -65,6 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -213,63 +214,7 @@ li a:hover:not(.active) {
                         <h2 class="pull-left">Messages</h2>
                         <a href="" id="link" class="btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
                         <div id="popup">
-                        <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="mt-5">New Message</h2>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="form-group">
-                            <label>To:   </label>
-                            <select id="dbox" name="uto" style="height:20px;width:200px">  
-                                <option value="">To</option>
-                                <?php
-                                    $sql = "SELECT id, username, aname FROM users";
-                                    $result = mysqli_query($link, $sql);
-
-                                    if (mysqli_num_rows($result) > 0) {
-                                        // output data of each row
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                    }
-                                    } else {
-                                        echo "0 results";
-                                    }
-                                    ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>From: </label>
-                            <select id="dbox2" name="ufrom" style="height:20px;width:200px">  
-                                <option value="">From</option>
-                                <?php
-                                    $sql = "SELECT id, username, aname FROM users";
-                                    $result = mysqli_query($link, $sql);
-
-                                    if (mysqli_num_rows($result) > 0) {
-                                        // output data of each row
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                    }
-                                    } else {
-                                        echo "0 results";
-                                    }
-                                    ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea name="message" class="form-control <?php echo (!empty($message_err)) ? 'is-invalid' : ''; ?>"><?php echo $message; ?></textarea>
-                            <span class="invalid-feedback"><?php echo $message_err;?></span>
-                            <span class="invalid-feedback"><?php echo $uto_err;?></span>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
-                        <a onClick="closepopup()" class="btn btn-secondary ml-2">Cancel</a>
-                    </form>
-                </div>
-            </div>        
-        </div>
-    </div>
+                            
                         </div>
                         <div id="popupdarkbg"></div>    
                     </div>
