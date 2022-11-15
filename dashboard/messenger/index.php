@@ -15,6 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $input_uto = trim($_POST["uto"]);
     if(empty($input_uto)){
         $uto_err = "Please enter a recipient.";
+        exit();
     #} elseif(!filter_var($input_uto, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
     #    $uto_err = "Please enter a valid name.";
     } else{
@@ -24,7 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate address
     $input_message = trim($_POST["message"]);
     if(empty($input_message)){
-        $message_err = "Please enter an message.";     
+        $message_err = "Please enter an message.";
+        exit();     
     } else{
         $message = $input_message;
     }
