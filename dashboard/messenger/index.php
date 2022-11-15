@@ -339,7 +339,7 @@ li a:hover:not(.active) {
                             e.preventDefault();
                             return;
                         }
-                        document.getElementByClassName("newmessage").addEventListener("click", function(e) {
+                        document.getElementsByClassName("newmessage").addEventListener("click", function(e) {
                             e.preventDefault();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
