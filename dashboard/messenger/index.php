@@ -246,7 +246,7 @@ li a:hover:not(.active) {
                                         echo "<td>" . $row['message'] . "</td>";
                                         echo "<td>";
                                             echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
-                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';echo "</td>";
+                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
