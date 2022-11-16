@@ -160,6 +160,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
                                 }
+                            echo '</select>'
                             // Free result set
                             mysqli_free_result($result);
                         } else{
@@ -182,6 +183,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
                                 }
+                                echo '</select>'
                             // Free result set
                             mysqli_free_result($result);
                         } else{
