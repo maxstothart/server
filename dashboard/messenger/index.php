@@ -190,15 +190,13 @@ li a:hover:not(.active) {
         });
     </script>
     <script>
-
-    $(function(){
-        $("#dbox").select2();
-    }); 
-
-    $(function(){
-        $("#dbox2").select2();
-    }); 
-</script>
+        $(document).ready(function() {
+            $('#dbox').select2();
+        });
+        $(document).ready(function() {
+            $('#dbox2').select2();
+        });
+    </script>
 </head>
 <body style="background-color: #E3E2DE">
     <ul>
