@@ -193,10 +193,7 @@ li a:hover:not(.active) {
 <body style="background-color: #E3E2DE">
     <script>
         $(document).ready(function() {
-            $('#dbox').select2();
-        });
-        $(document).ready(function() {
-            $('#dbox2').select2();
+            $('.dbox').select2();
         });
     </script>
     <ul>

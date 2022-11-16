@@ -150,7 +150,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>To:   </label>
-                            <select id="dbox" name="uto" style="height:20px;width:200px">  
                             <?php
                     
                     // Attempt select query execution
@@ -179,7 +178,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $sql = "SELECT * FROM users";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<select id="dbox2" name="ufrom" style="height:20px;width:200px">';
+                            echo '<select name="ufrom" style="height:20px;width:200px">';
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
                                 }
