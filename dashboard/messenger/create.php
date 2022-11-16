@@ -137,15 +137,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-<script>
-    $(function(){
-        $("#dbox").select2();
-    }); 
 
-    $(function(){
-        $("#dbox2").select2();
-    }); 
-</script>
 </head>
 <body style="background-color: #E3E2DE">
     <div class="wrapper">
@@ -207,6 +199,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+        $("#dbox").select2();
+    }); 
+
+    $(function(){
+        $("#dbox2").select2();
+    }); 
+</script>
 <?php } else{?>
     <?php
 // Include config file
