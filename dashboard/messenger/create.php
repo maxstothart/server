@@ -154,12 +154,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <?php
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM friends WHERE user='$username'";
+                    $sql = "SELECT * FROM users";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<select id="dbox" name="uto" style="height:20px;width:200px">';
                                 while($row = mysqli_fetch_array($result)){
-                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
+                                    echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
                                 }
                             // Free result set
                             mysqli_free_result($result);
@@ -176,12 +176,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <?php
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM friends WHERE user='$username'";
+                    $sql = "SELECT * FROM users";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<select id="dbox2" name="ufrom" style="height:20px;width:200px">';
                                 while($row = mysqli_fetch_array($result)){
-                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
+                                    echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
                                 }
                             // Free result set
                             mysqli_free_result($result);
