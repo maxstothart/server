@@ -146,6 +146,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $(document).ready(function() {
             $('#dbox').select2();
         });
+        $(document).ready(function() {
+            $('#dbox2').select2();
+        });
     </script>
     <div class="wrapper">
         <div class="container-fluid">
@@ -156,40 +159,47 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group">
                             <label>To:   </label>
                             <select id="dbox" name="uto" style="height:20px;width:200px">  
-                                <option value="">To</option>
-                                <?php
-                                    $sql = "SELECT id, username, aname FROM users";
-                                    $result = mysqli_query($link, $sql);
-
-                                    if (mysqli_num_rows($result) > 0) {
-                                        // output data of each row
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                    }
-                                    } else {
-                                        echo "0 results";
-                                    }
-                                    ?>
-                            </select>
+                            <?php
+                    
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM friends WHERE user='$username'";
+                    if($result = mysqli_query($link, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<select id="dbox" name="uto" style="height:20px;width:200px">';
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
+                                }
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+                    ?>
                         </div>
                         <div class="form-group">
                             <label>From: </label>
-                            <select id="dbox2" name="ufrom" style="height:20px;width:200px">  
-                                <option value="">From</option>
-                                <?php
-                                    $sql = "SELECT id, username, aname FROM users";
-                                    $result = mysqli_query($link, $sql);
-
-                                    if (mysqli_num_rows($result) > 0) {
-                                        // output data of each row
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                        echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
-                                    }
-                                    } else {
-                                        echo "0 results";
-                                    }
-                                    ?>
-                            </select>
+                            <?php
+                    
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM friends WHERE user='$username'";
+                    if($result = mysqli_query($link, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<select id="dbox2" name="ufrom" style="height:20px;width:200px">';
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<option value='" . $row["frienduname"]. "'>" . $row["friendaname"]. "</option>";
+                                }
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+                    ?>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
