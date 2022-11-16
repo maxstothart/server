@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
 }
 ?>
-    <div class="wrapper" style="background-color: #E3E2DE">
+    <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -199,7 +199,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
 }
 ?>
-    <div class="wrapper" style="background-color: #E3E2DE">
+    <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">

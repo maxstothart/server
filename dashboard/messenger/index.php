@@ -209,13 +209,9 @@ li a:hover:not(.active) {
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Messages</h2>
                         <a href="" id="message" class="addmessage btn btn-success pull-right"><i class="fa fa-plus"></i> New Message</a>
-                        <div id="popup" class="popup">   
+                        <div id="popup" class="popup" style="background-color: #E3E2DE">   
                         </div>
-                        <div id="popupdarkbg" class="popupdarkbg"></div>   
-                        <div id="popup1" class="popup">  
-                            <h2>hi</h2> 
-                        </div>
-                        <div id="popupdarkbg1" class="popupdarkbg"></div>  
+                        <div id="popupdarkbg" class="popupdarkbg"></div>
                     </div>
                     <?php
                     // Attempt select query execution
