@@ -156,7 +156,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $sql = "SELECT * FROM users";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<select id="dbox" name="uto" style="height:20px;width:200px">';
+                            echo '<select id="dbox" class="dbox" name="uto" style="height:20px;width:200px">';
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
                                 }
