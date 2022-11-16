@@ -189,6 +189,8 @@ li a:hover:not(.active) {
             $('[data-toggle="tooltip"]').tooltip();   
         });
     </script>
+</head>
+<body style="background-color: #E3E2DE">
     <script>
         $(document).ready(function() {
             $('#dbox').select2();
@@ -197,8 +199,6 @@ li a:hover:not(.active) {
             $('#dbox2').select2();
         });
     </script>
-</head>
-<body style="background-color: #E3E2DE">
     <ul>
         <li><a href="https://windmill-inc.com">Home</a></li>
         <li><a href="/">Dash</a></li>
