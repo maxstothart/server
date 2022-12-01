@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['clientZone'])) {
-   header('Location: https://dash.windmill-inc.com');
+   header('Location: https://dash1.windmill-inc.com');
 }
 ?>
 <!DOCTYPE html>
