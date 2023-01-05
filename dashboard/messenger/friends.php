@@ -66,6 +66,8 @@ li a:hover:not(.active) {
                             echo "pending";
                           } elseif ($row['accepted'] == '3') {
                             echo "accpeted";
+                          }else {
+                            echo "error"
                           }
                             // Free result set
                             mysqli_free_result($result);
