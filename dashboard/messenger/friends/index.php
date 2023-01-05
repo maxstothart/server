@@ -237,9 +237,12 @@ li a:hover:not(.active) {
                                         echo "<td>" . $row['uname2'] . "</td>";
                                         echo "<td>" . $row['accepted'] . "</td>";
                                         echo "<td>";
-                                            echo '<a id="acceptfriend" class="acceptfriend mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
-                                            echo '<a class="removefriend" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
-                                    echo "</tr>";
+                                            if ($row['accepted'] == 1) {
+                                                echo '<a id="acceptfriend" class="acceptfriend mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
+                                            } elseif ($row['accepted'] == 2) {
+                                                echo '<a class="removefriend" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
+                                            }
+                                            echo "</tr>";
                                 }
                                 echo "</tbody>";                            
                             echo "</table>";
