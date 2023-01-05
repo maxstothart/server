@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(mysqli_num_rows($result) > 0){
                             echo '<select id="dbox" class="dbox" name="uto" style="height:20px;width:200px">';
                                 while($row = mysqli_fetch_array($result)){
-                                    echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
+                                    echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
                                 }
                             echo '</select>';
                             // Free result set
@@ -204,7 +204,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mt-5">New Message</h2>
-                    <form action="create.php" method="post">
+                    <form action="index.php" method="post">
                         <div class="form-group">
                         <label>To</label>
                             <?php
