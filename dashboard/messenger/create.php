@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Free result set
                             mysqli_free_result($result);
                         } else{
-                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobitses were found.</em></div>';
+                            echo '<div class="alert alert-danger"><em>Non of dem nasty little hobbitses were found.</em></div>';
                         }
                     } else{
                         echo "Oops! Something went wrong. Please try again later.";
