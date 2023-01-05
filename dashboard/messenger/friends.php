@@ -1,30 +1,14 @@
+<?php require "config.php";?>
+// Define variables and initialize with empty values
+$uname1 = $uname2 = "";
+$accepted = "2";
+$uname1_err = $uname2_err = "";
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.vertical-menu {
-  width: 200px;
-}
-
-.vertical-menu a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.vertical-menu a:hover {
-  background-color: #ccc;
-}
-
-.vertical-menu a.active {
-  background-color: #218838;
-  color: #111;
-}
-
-</style>
 <style>
 ul {
   list-style-type: none;
@@ -67,16 +51,48 @@ li a:hover:not(.active) {
   <li><a href="/messenger">Messenger</a></li>
   <li style="float:right"><a class="active" href="/messenger/friends.php">Friends</a></li>
 </ul>
-
-<h1>Vertical Menu</h1>
-
-<div class="vertical-menu">
-  <a href="#" class="active">Home</a>
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  <a href="#">Link 4</a>
 </div>
-
+                    <?php
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM messenger";
+                    if($result = mysqli_query($link, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<table class="table table-bordered table-striped">';
+                                echo "<thead>";
+                                    echo "<tr>";
+                                        echo "<th>#</th>";
+                                        echo "<th>To</th>";
+                                        echo "<th>From</th>";
+                                        echo "<th>Message</th>";
+                                        echo "<th>Action</th>";
+                                    echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<tr>";
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['uto'] . "</td>";
+                                        echo "<td>" . $row['ufrom'] . "</td>";
+                                        echo "<td>" . $row['message'] . "</td>";
+                                        echo "<td>";
+                                            echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
+                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";                            
+                            echo "</table>";
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>No Messages were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+ 
+                    // Close connection
+                    //mysqli_close($link);
+                    ?>
+                </div>
 </body>
 </html>
