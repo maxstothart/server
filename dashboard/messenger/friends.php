@@ -57,7 +57,7 @@ li a:hover:not(.active) {
 </div>
                     <?php
                     // Attempt select query execution
-                    $sql = "SELECT * FROM messenger";
+                    $sql = "SELECT * FROM friends";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
@@ -74,9 +74,9 @@ li a:hover:not(.active) {
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['uto'] . "</td>";
-                                        echo "<td>" . $row['ufrom'] . "</td>";
-                                        echo "<td>" . $row['message'] . "</td>";
+                                        echo "<td>" . $row['uname1'] . "</td>";
+                                        echo "<td>" . $row['uname2'] . "</td>";
+                                        echo "<td>" . $row['accepted'] . "</td>";
                                         echo "<td>";
                                             echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
                                             echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
