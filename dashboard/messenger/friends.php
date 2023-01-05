@@ -57,7 +57,7 @@ li a:hover:not(.active) {
 </div>
                     <?php
                     // Attempt select query execution
-                    $sql = "SELECT * FROM friends WHERE uname1 = '$username' || uname2 = '$username'";
+                    $sql = "SELECT * FROM friends WHERE uname1 = '$username' OR uname2 = '$username'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                           if($row['accepted'] ==  '1'){
@@ -68,7 +68,7 @@ li a:hover:not(.active) {
                             echo "accpeted";
                           }else {
                             echo "error";
-                            echo "".$row['accepted']."";
+                            echo "".$row['id']."";
 
                           }
                             // Free result set
