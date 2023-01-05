@@ -1,6 +1,6 @@
 <?php require_once "config.php";
 if($acctype == "admin"){ 
-    echo "ELEVATED PRIVELEDGES: $username"?>
+    echo "  ELEVATED PRIVELEDGES: $username"?>
 <?php
 // Include config file
 require "config.php";
