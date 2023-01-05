@@ -1,9 +1,9 @@
-<?php require "config.php";?>
-// Define variables and initialize with empty values
+<?php require "config.php";
+// Define variables and initialize values
 $uname1 = $uname2 = "";
 $accepted = "2";
 $uname1_err = $uname2_err = "";
-
+?>
 
 <!DOCTYPE html>
 <html>
@@ -43,6 +43,9 @@ li a:hover:not(.active) {
   background-color: #218838;
 }
 </style>
+<link rel="icon" type="image/x-icon" href="http://windmillinc.tk/logo.png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
 </head>
 <body style="background-color: #E3E2DE">
 <ul>
@@ -54,33 +57,30 @@ li a:hover:not(.active) {
 </div>
                     <?php
                     // Attempt select query execution
-                    $sql = "SELECT * FROM messenger";
+                    $sql = "SELECT * FROM friends";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
-                                        echo "<th>To</th>";
-                                        echo "<th>From</th>";
-                                        echo "<th>Message</th>";
-                                        echo "<th>Action</th>";
+                                        echo "<th>uname1</th>";
+                                        echo "<th>uname2</th>";
+                                        echo "<th>accepted</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['uto'] . "</td>";
-                                        echo "<td>" . $row['ufrom'] . "</td>";
-                                        echo "<td>" . $row['message'] . "</td>";
+                                        echo "<td>" . $row['uname1'] . "</td>";
+                                        echo "<td>" . $row['uname2'] . "</td>";
+                                        echo "<td>" . $row['accepted'] . "</td>";
                                         echo "<td>";
-                                            echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
-                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
-                                    echo "</tr>";
+                                        echo "</tr>";
                                 }
                                 echo "</tbody>";                            
-                            echo "</table>";
+                                echo "</table>";
                             // Free result set
                             mysqli_free_result($result);
                         } else{
