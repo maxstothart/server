@@ -61,15 +61,11 @@ li a:hover:not(.active) {
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                           if($row['accepted'] ==  '1'){
-                            echo "bob";
-                            // Prepare a delete statement
-                            $sql1 = "DELETE FROM messenger WHERE id = ";   
-                            if($stmt = mysqli_prepare($link, $sql1)){
-                            // Bind variables to the prepared statement as parameters
-                            mysqli_stmt_bind_param($stmt, "i", $param_id);        
-                            // Set parameters
-                            $param_id = $row['id'];
-                            }
+                            echo "delete";
+                          } elseif ($row['accepted'] == '2') {
+                            echo "pending";
+                          } elseif ($row['accepted'] == '3') {
+                            echo "accpeted";
                           }
                             // Free result set
                             mysqli_free_result($result);
