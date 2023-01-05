@@ -1,6 +1,6 @@
 <?php require_once "config.php";
 if($acctype == "admin"){ 
-echo "ELEVATED PRIVELEDGES: $username"?>
+echo "  ELEVATED PRIVELEDGES: $username"?>
 <?php
 // Include config file
 require "config.php";
@@ -53,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo '<script type="text/javascript">',
                 'redirect();',
                 'function redirect() {',
-                'window.top.location.href = "http://www.example.com";',
+                'window.top.location.href = "index.php";',
                 '}',
                 '</script>';
                 exit();
