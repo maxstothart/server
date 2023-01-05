@@ -57,30 +57,17 @@ li a:hover:not(.active) {
 </div>
                     <?php
                     // Attempt select query execution
-                    $sql = "SELECT * FROM friends WHERE uname1 = 'maxs' || uname2 = 'maxs'";
+                    $sql = "SELECT * FROM friends WHERE uname1 = '$username' || uname2 = '$username'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table table-bordered table-striped">';
-                                echo "<thead>";
-                                    echo "<tr>";
-                                        echo "<th>#</th>";
-                                        echo "<th>uname1</th>";
-                                        echo "<th>uname2</th>";
-                                        echo "<th>accepted</th>";
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['uname1'] . "</td>";
-                                        echo "<td>" . $row['uname2'] . "</td>";
-                                        echo "<td>" . $row['accepted'] . "</td>";
-                                        echo "<td>";
-                                        echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                                echo "</table>";
+                          if($row['accepted'] ==  '1'){
+                            // Prepare a delete statement
+                            $sql1 = "DELETE FROM messenger WHERE id = ";   
+                            if($stmt = mysqli_prepare($link, $sql1)){
+                            // Bind variables to the prepared statement as parameters
+                            mysqli_stmt_bind_param($stmt, "i", $param_id);        
+                            // Set parameters
+                            $param_id = $row['id'];
                             // Free result set
                             mysqli_free_result($result);
                         } else{
