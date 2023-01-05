@@ -57,21 +57,33 @@ li a:hover:not(.active) {
 </div>
                     <?php
                     // Attempt select query execution
-                    $sql = "SELECT * FROM friends";
+                    $sql = "SELECT * FROM messenger";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                          $accepted = $row['accepted'];
-                          if($row['accepted'] ==  '1'){
-                            echo "delete";
-                          } elseif ($row['accepted'] == '2') {
-                            echo "pending";
-                          } elseif ($row['accepted'] == '3') {
-                            echo "accpeted";
-                          }else {
-                            echo "error";
-                            echo "".$row['id']."";
-
-                          }
+                            echo '<table class="table table-bordered table-striped">';
+                                echo "<thead>";
+                                    echo "<tr>";
+                                        echo "<th>#</th>";
+                                        echo "<th>To</th>";
+                                        echo "<th>From</th>";
+                                        echo "<th>Message</th>";
+                                        echo "<th>Action</th>";
+                                    echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<tr>";
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['uto'] . "</td>";
+                                        echo "<td>" . $row['ufrom'] . "</td>";
+                                        echo "<td>" . $row['message'] . "</td>";
+                                        echo "<td>";
+                                            echo '<a id="readmessage" class="viewmessage mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
+                                            echo '<a class="delmessage" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";                            
+                            echo "</table>";
                             // Free result set
                             mysqli_free_result($result);
                         } else{
