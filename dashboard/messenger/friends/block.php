@@ -5,7 +5,7 @@
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     
     // Prepare a delete statement
-    $sql = "DELETE FROM messenger WHERE id = ?";
+    $sql = "DELETE FROM friends WHERE id = ?";
     
     if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
@@ -58,7 +58,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5 mb-3">Block User</h2>
+                    <h2 class="mt-5 mb-3">Delete Message</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="alert alert-danger">
                             <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>"/>
