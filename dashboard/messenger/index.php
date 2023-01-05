@@ -96,7 +96,7 @@ li:last-child {
 }
 
 li a {
-  border-radius: 25px;
+  border-radius: 5px;
   display: block;
   color: white;
   text-align: center;
