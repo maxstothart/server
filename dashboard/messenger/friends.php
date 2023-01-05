@@ -68,7 +68,7 @@ li a:hover:not(.active) {
                             echo "accpeted";
                           }else {
                             echo "error";
-                            echo $row['accepted'];
+                            echo "".$row['accepted']."";
 
                           }
                             // Free result set
