@@ -68,7 +68,8 @@ li a:hover:not(.active) {
                             echo "accpeted";
                           }else {
                             echo "error";
-                            
+                            echo "$row['accpeted']";
+
                           }
                             // Free result set
                             mysqli_free_result($result);
