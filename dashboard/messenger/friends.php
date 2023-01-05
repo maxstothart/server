@@ -56,6 +56,7 @@ li a:hover:not(.active) {
 </ul>
 </div>
                     <?php
+                    echo $username
                     // Attempt select query execution
                     $sql = "SELECT * FROM friends";
                     if($result = mysqli_query($link, $sql)){
