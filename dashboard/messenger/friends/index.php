@@ -200,8 +200,8 @@ li a:hover:not(.active) {
     <ul>
         <li><a href="https://windmill-inc.com">Home</a></li>
         <li><a href="/">Dash</a></li>
-        <li><a class="active" href="/messenger">Messenger</a></li>
-        <li style="float:right"><a href="/messenger/friends.php">Friends</a></li>
+        <li><a href="/messenger">Messenger</a></li>
+        <li style="float:right"><a class="active" href="/messenger/friends/">Friends</a></li>
     </ul>
     <div class="wrapper">
         <div class="container-fluid">
