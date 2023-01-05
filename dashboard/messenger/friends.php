@@ -60,7 +60,6 @@ li a:hover:not(.active) {
                     $sql = "SELECT * FROM friends WHERE uname1 = 'maxs' || uname2 = 'maxs'";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                          $
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
