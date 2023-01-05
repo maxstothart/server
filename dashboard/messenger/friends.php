@@ -68,6 +68,8 @@ li a:hover:not(.active) {
                             mysqli_stmt_bind_param($stmt, "i", $param_id);        
                             // Set parameters
                             $param_id = $row['id'];
+                            }
+                          }
                             // Free result set
                             mysqli_free_result($result);
                         } else{
