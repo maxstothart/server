@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(mysqli_num_rows($result) > 0){
                             echo '<select name="ufrom" style="height:20px;width:200px">';
                                 while($row = mysqli_fetch_array($result)){
-                                    echo "<option value='" . $row["uname"]. "'>" . $row["aname"]. "</option>";
+                                    echo "<option value='" . $row["username"]. "'>" . $row["aname"]. "</option>";
                                 }
                                 echo '</select>';
                             // Free result set
