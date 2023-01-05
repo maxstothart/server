@@ -282,7 +282,7 @@ li a:hover:not(.active) {
                         for (let el of document.querySelectorAll(".acceptfriend")) {
                         el.addEventListener("click", async function(e) {
                             e.preventDefault();
-                            let response = await fetch("read.php?id="+e.target.parentElement.dataset.id)
+                            let response = await fetch("accept.php?id="+e.target.parentElement.dataset.id)
                             document.getElementById("popup").innerHTML = await response.text();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
@@ -295,7 +295,7 @@ li a:hover:not(.active) {
                         for (let el of document.querySelectorAll(".removefriend")) {
                         el.addEventListener("click", async function(e) {
                             e.preventDefault();
-                            let response = await fetch("delete.php?id="+e.target.parentElement.dataset.id)
+                            let response = await fetch("block.php?id="+e.target.parentElement.dataset.id)
                             document.getElementById("popup").innerHTML = await response.text();
                             document.getElementById("popupdarkbg").style.display = "block";
                             document.getElementById("popup").style.display = "block";
