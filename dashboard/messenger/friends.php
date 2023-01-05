@@ -61,6 +61,7 @@ li a:hover:not(.active) {
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                           if($row['accepted'] ==  '1'){
+                            echo "bob";
                             // Prepare a delete statement
                             $sql1 = "DELETE FROM messenger WHERE id = ";   
                             if($stmt = mysqli_prepare($link, $sql1)){
