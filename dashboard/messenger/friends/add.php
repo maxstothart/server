@@ -203,7 +203,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">New Message</h2>
+                    <h2 class="mt-5">Friends</h2>
                     <form action="index.php" method="post">
                         <div class="form-group">
                         <label>To</label>
