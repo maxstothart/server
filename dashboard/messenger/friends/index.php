@@ -223,9 +223,9 @@ li a:hover:not(.active) {
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";
-                                        echo "<th>To</th>";
-                                        echo "<th>From</th>";
-                                        echo "<th>Message</th>";
+                                        echo "<th>uname1</th>";
+                                        echo "<th>uname2</th>";
+                                        echo "<th>accepted</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -233,9 +233,9 @@ li a:hover:not(.active) {
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['uto'] . "</td>";
-                                        echo "<td>" . $row['ufrom'] . "</td>";
-                                        echo "<td>" . $row['message'] . "</td>";
+                                        echo "<td>" . $row['uname1'] . "</td>";
+                                        echo "<td>" . $row['uname2'] . "</td>";
+                                        echo "<td>" . $row['accepted'] . "</td>";
                                         echo "<td>";
                                             echo '<a id="acceptfriend" class="acceptfriend mr-3" title="View Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-eye"></span></a>';
                                             echo '<a class="removefriend" title="Delete Message" data-toggle="tooltip" data-id="' . $row['id'] . '"><span class="fa fa-trash"></span></a>';echo "</td>";
