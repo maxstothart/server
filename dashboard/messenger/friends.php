@@ -68,7 +68,6 @@ li a:hover:not(.active) {
                                         echo "<th>To</th>";
                                         echo "<th>From</th>";
                                         echo "<th>Message</th>";
-                                        echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
