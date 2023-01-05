@@ -60,6 +60,7 @@ li a:hover:not(.active) {
                     $sql = "SELECT * FROM friends";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
+                          $accepted = $row['accepted']
                           if($row['accepted'] ==  '1'){
                             echo "delete";
                           } elseif ($row['accepted'] == '2') {
