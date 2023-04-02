@@ -389,6 +389,9 @@ if (isset($_GET['clientZone'])) {
          .online {
             display: none
          }
+         .cf-turnstile {
+            display: none
+         }
       </style>
       <!-- Custom CSS --> <!-- Minimize CSS files -->
       <link rel="stylesheet" href="https://cdn-cms-s.f-static.net/versions/2/css/minimize_main.css?v=n8158" type="text/css" crossorigin="anonymous">
