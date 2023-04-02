@@ -396,6 +396,9 @@ if (isset($_GET['clientZone'])) {
       <!-- Froala Editor CSS --> <!-- Google AdSense --> 
    </head>
    <body id="page-top">
+      <div class="online">
+         <h1>online</h1>>
+      </div>
       <div class="body">
          <div id="websiteHeader">
             <nav id="mainNav" class="hidden-xs navbar-default navbar-fixed-top  opacity-slight">
