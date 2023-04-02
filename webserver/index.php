@@ -42,6 +42,7 @@ if (isset($_GET['clientZone'])) {
          
          gtag('config', 'UA-171296505-1');
       </script> 
+      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
       <style>/* cyrillic-ext */
          @font-face {
          font-family: 'Open Sans';
@@ -396,6 +397,7 @@ if (isset($_GET['clientZone'])) {
       <!-- Froala Editor CSS --> <!-- Google AdSense --> 
    </head>
    <body id="page-top">
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAADrdNO8T-WUybmG" data-callback="javascriptCallback"></div>
       <div class="online">
          <h1>online</h1>>
       </div>
